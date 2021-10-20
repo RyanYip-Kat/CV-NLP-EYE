@@ -1,0 +1,44 @@
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/macular/train.txt [0m
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/macular/train.txt [0m
+[0;31m Single channel binary image is multiplied by 255 [0m
+ori data shape < ori_imgs:(900, 3, 299, 299) GTs:(900, 1, 299, 299) FOVs:(900, 1, 299, 299)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/macular/val.txt [0m
+[0;31m Single channel binary image is multiplied by 255 [0m
+ori data shape < ori_imgs:(100, 3, 299, 299) GTs:(100, 1, 299, 299) FOVs:(100, 1, 299, 299)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+the side H is not compatible with the selected stride of 16
+(img_h - patch_h) MOD stride_h: 11
+So the H dim will be padded with additional 5 pixels
+the side W is not compatible with the selected stride of 16
+(img_w - patch_w) MOD stride_w: 11
+So the W dim will be padded with additional 5 pixels
+new padded images shape: (100, 1, 304, 304)
+
+Test images shape: (100, 1, 304, 304), vaule range (0.0 - 1.0):
+Number of patches on h : 14
+Number of patches on w : 14
+number of patches per image: 196, totally for testset: 19600
+test patches shape: (19600, 1, 96, 96), value range (0.0 - 1.0)
+
+EPOCH: 22/50 --(learn_rate:0.000500) | Time: Tue Sep 14 06:31:16 2021
+There are 100 images in Testset
+[False]
+[0. 1.]

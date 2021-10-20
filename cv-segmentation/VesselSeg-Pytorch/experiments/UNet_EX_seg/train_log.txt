@@ -1,0 +1,380 @@
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+
+EPOCH: 1/50 --(learn_rate:0.000500) | Time: Tue Sep  7 10:22:24 2021
+OrderedDict([('epoch', 1), ('train_loss', 0.037278), ('val_loss', 0.025332), ('val_acc', 0.992174), ('val_f1', 0.608311), ('val_auc_roc', 0.978215)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 1 | AUC_roc: 0.9782153305251375
+
+EPOCH: 2/50 --(learn_rate:0.000500) | Time: Tue Sep  7 11:35:54 2021
+OrderedDict([('epoch', 2), ('train_loss', 0.026212), ('val_loss', 0.021498), ('val_acc', 0.99299), ('val_f1', 0.645112), ('val_auc_roc', 0.984971)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 2 | AUC_roc: 0.9849710799743356
+
+EPOCH: 3/50 --(learn_rate:0.000498) | Time: Tue Sep  7 11:53:35 2021
+OrderedDict([('epoch', 3), ('train_loss', 0.024336), ('val_loss', 0.020635), ('val_acc', 0.993489), ('val_f1', 0.695482), ('val_auc_roc', 0.985329)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 3 | AUC_roc: 0.9853290297638383
+
+EPOCH: 4/50 --(learn_rate:0.000496) | Time: Tue Sep  7 12:16:00 2021
+OrderedDict([('epoch', 4), ('train_loss', 0.023427), ('val_loss', 0.021051), ('val_acc', 0.993385), ('val_f1', 0.668876), ('val_auc_roc', 0.985449)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 4 | AUC_roc: 0.9854487271448585
+
+EPOCH: 5/50 --(learn_rate:0.000492) | Time: Tue Sep  7 12:52:02 2021
+OrderedDict([('epoch', 5), ('train_loss', 0.022894), ('val_loss', 0.023536), ('val_acc', 0.992367), ('val_f1', 0.670995), ('val_auc_roc', 0.987534)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 5 | AUC_roc: 0.9875336529891768
+
+EPOCH: 6/50 --(learn_rate:0.000488) | Time: Tue Sep  7 13:11:44 2021
+OrderedDict([('epoch', 6), ('train_loss', 0.021985), ('val_loss', 0.018652), ('val_acc', 0.99395), ('val_f1', 0.722554), ('val_auc_roc', 0.989313)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 6 | AUC_roc: 0.9893126769286268
+
+EPOCH: 7/50 --(learn_rate:0.000482) | Time: Tue Sep  7 13:23:52 2021
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+
+EPOCH: 7/50 --(learn_rate:0.000500) | Time: Wed Sep  8 00:05:11 2021
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 7/50 --(learn_rate:0.000500) | Time: Wed Sep  8 02:15:47 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 7), ('train_loss', 0.020446), ('val_auc_roc', 0.992388), ('val_f1', 0.752539), ('val_acc', 0.993127), ('SE', 0.672414), ('SP', 0.99819)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 7 | AUC_roc: 0.992388
+
+EPOCH: 8/50 --(learn_rate:0.000500) | Time: Wed Sep  8 02:19:50 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 8), ('train_loss', 0.021065), ('val_auc_roc', 0.990843), ('val_f1', 0.714733), ('val_acc', 0.992719), ('SE', 0.586858), ('SP', 0.999127)])
+Best performance at Epoch: 7 | AUC_roc: 0.992388
+
+EPOCH: 9/50 --(learn_rate:0.000498) | Time: Wed Sep  8 02:24:47 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 9/50 --(learn_rate:0.000500) | Time: Wed Sep  8 02:48:34 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 9/50 --(learn_rate:0.000500) | Time: Wed Sep  8 02:58:38 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 9), ('train_loss', 0.019658), ('val_auc_roc', 0.991648), ('val_f1', 0.746299), ('val_acc', 0.992679), ('SE', 0.692752), ('SP', 0.997415)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 9 | AUC_roc: 0.991648
+
+EPOCH: 10/50 --(learn_rate:0.000500) | Time: Wed Sep  8 03:02:12 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 10/50 --(learn_rate:0.000500) | Time: Wed Sep  8 03:23:04 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 10), ('train_loss', 0.019468), ('val_auc_roc', 0.992534), ('val_f1', 0.751026), ('val_acc', 0.993046), ('SE', 0.674834), ('SP', 0.99807)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 10 | AUC_roc: 0.992534
+
+EPOCH: 11/50 --(learn_rate:0.000500) | Time: Wed Sep  8 03:37:15 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 11), ('train_loss', 0.020178), ('val_auc_roc', 0.992413), ('val_f1', 0.759043), ('val_acc', 0.993312), ('SE', 0.677697), ('SP', 0.998295)])
+Best performance at Epoch: 10 | AUC_roc: 0.992534
+
+EPOCH: 12/50 --(learn_rate:0.000498) | Time: Wed Sep  8 03:42:07 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 12), ('train_loss', 0.019858), ('val_auc_roc', 0.992045), ('val_f1', 0.760257), ('val_acc', 0.993136), ('SE', 0.700247), ('SP', 0.99776)])
+Best performance at Epoch: 10 | AUC_roc: 0.992534
+
+EPOCH: 13/50 --(learn_rate:0.000496) | Time: Wed Sep  8 03:47:16 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 13), ('train_loss', 0.01991), ('val_auc_roc', 0.990636), ('val_f1', 0.715527), ('val_acc', 0.992556), ('SE', 0.60229), ('SP', 0.998718)])
+Best performance at Epoch: 10 | AUC_roc: 0.992534
+
+EPOCH: 14/50 --(learn_rate:0.000492) | Time: Wed Sep  8 03:59:44 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 14/50 --(learn_rate:0.000500) | Time: Wed Sep  8 04:09:44 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 14), ('train_loss', 0.018903), ('val_auc_roc', 0.992023), ('val_f1', 0.760503), ('val_acc', 0.993298), ('SE', 0.684645), ('SP', 0.998171)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 14 | AUC_roc: 0.992023
+
+EPOCH: 15/50 --(learn_rate:0.000500) | Time: Wed Sep  8 04:13:41 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 15), ('train_loss', 0.019013), ('val_auc_roc', 0.992376), ('val_f1', 0.752448), ('val_acc', 0.99323), ('SE', 0.661978), ('SP', 0.99846)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 15 | AUC_roc: 0.992376
+
+EPOCH: 16/50 --(learn_rate:0.000498) | Time: Wed Sep  8 04:17:25 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 16/50 --(learn_rate:0.000500) | Time: Wed Sep  8 04:47:08 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 16), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.0), ('val_acc', 0.984457), ('SE', 0.0), ('SP', 1.0)])
+Best performance at Epoch: 0 | AUC_roc: 0.5
+
+EPOCH: 17/50 --(learn_rate:0.000500) | Time: Wed Sep  8 04:52:22 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 17), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.0), ('val_acc', 0.984457), ('SE', 0.0), ('SP', 1.0)])
+Best performance at Epoch: 0 | AUC_roc: 0.5
+
+EPOCH: 18/50 --(learn_rate:0.000498) | Time: Wed Sep  8 05:00:37 2021
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 18/50 --(learn_rate:0.000500) | Time: Wed Sep  8 05:21:52 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 18/50 --(learn_rate:0.000500) | Time: Wed Sep  8 05:50:23 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 18), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.03061), ('val_acc', 0.015543), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 0 | AUC_roc: 0.5
+
+EPOCH: 19/50 --(learn_rate:0.000500) | Time: Wed Sep  8 05:54:17 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 19), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.03061), ('val_acc', 0.015543), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 0 | AUC_roc: 0.5
+
+EPOCH: 20/50 --(learn_rate:0.000498) | Time: Wed Sep  8 05:58:13 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 20), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.03061), ('val_acc', 0.015543), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 0 | AUC_roc: 0.5
+
+EPOCH: 21/50 --(learn_rate:0.000496) | Time: Wed Sep  8 06:08:53 2021
+There are 27 images in Testset

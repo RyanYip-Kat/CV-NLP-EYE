@@ -1,0 +1,61 @@
+10/19/2021 07:42:31 [predict.py 11] main - INFO: TASK ID 416419a6
+10/19/2021 07:42:32 [predict.py 145] main - INFO: PARAMETER PARSING
+10/19/2021 07:42:32 [predict.py 149] main - INFO: 
+======= VRBotOption START =======
+state_num : 10
+action_num : 3
+triple_num_per_graph : 10
+know_vocab_size : None
+vocab_size : None
+response_max_len : 100
+embed_dim : 300
+hidden_units : 512
+hidden_dim : 512
+num_layers : 1
+bidirectional : True
+rnn_hidden_size : 256
+dropout : 0.2
+attention_type : mlp
+train_stage : state
+ppn_dq : False
+max_context_turn : 10
+max_sentence_word : 100
+max_target_word : 100
+s_copy_lambda : 1.0
+a_copy_lambda : 1.0
+copy_lambda_decay_interval : 10000
+copy_lambda_decay_value : 1.0
+state_action_copy_lambda_mini : 1.0
+init_tau : 1.0
+tau_mini : 0.1
+tau_decay_interval : 5000
+tau_decay_rate : 0.5
+mask_state_prob : False
+node_embed_dim : 128
+with_weak_action : False
+training_sampling_times : 5
+attn_history_sentence : True
+with_state_know : True
+with_action_know : True
+with_copy : True
+GATConfig : <class 'resource.option.vrbot_option.VRBotOption.GATConfig'>
+max_node_num1 : 100
+max_node_num2 : 50
+single_node_max_triple1 : 10
+single_node_max_triple2 : 5
+======= VRBotOption END =======
+
+10/19/2021 07:42:32 [predict.py 151] main - INFO: PREPARE DATA
+10/19/2021 07:42:32 [predict.py 82] main - INFO: preparing sessions
+10/19/2021 07:42:32 [predict.py 86] main - INFO: preparing vocab
+10/19/2021 07:42:32 [vocab.py 22] main.vocab - INFO: Vocab, size=29999, <sos>,<eos>,<pad> ... 髌股,脚动,低估,大规模,<_>
+10/19/2021 07:42:32 [vocab.py 22] main.vocab - INFO: Vocab, size=4483, <sos>,<eos>,<pad> ... 香菊胶囊,金莲花颗粒,二十二,晒斑,十味蒂达
+10/19/2021 07:42:35 [load_data.py 16] main - INFO: 
+read session from data/meddialog_valid.zip
+10/19/2021 07:42:37 [predict.py 174] main - INFO: LOAD CHECKPOINT FROM data/ckpt/VRBot/meddialog/17-50000-(0.1583-0.0605-0.0306-0.0189).model.ckpt
+10/19/2021 07:42:37 [vrbot_engine_testor.py 177] main.engine - INFO: LOAD CKPT FROM data/ckpt/VRBot/meddialog/17-50000-(0.1583-0.0605-0.0306-0.0189).model.ckpt
+10/19/2021 07:42:37 [vrbot_engine_testor.py 51] main.engine - INFO: TEST INFERENCE START ...
+10/19/2021 07:45:23 [vrbot_engine_testor.py 98] main.engine - INFO: TEST INFERENCE FINISHED
+10/19/2021 07:45:25 [vrbot_engine_testor.py 160] main.engine - INFO: WRITE test OUTPUT TO FILE data/test/VRBOT-416419a6-test.txt
+10/19/2021 07:45:25 [writer4json.py 18] main.json_writer - INFO: dumping to data/test/VRBOT-416419a6-test.txt with 2852 sessions
+10/19/2021 07:45:25 [writer4json.py 22] main.json_writer - INFO: dump done in 0.20224666595458984 seconds

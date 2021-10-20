@@ -1,0 +1,782 @@
+10/04/2021 01:51:30 [main.py 12] main - INFO: TASK ID fb7574e5
+10/04/2021 01:51:31 [main.py 52] main - INFO: PARAMETER PARSING
+10/04/2021 01:51:31 [main.py 56] main - INFO: 
+======= VRBotOption START =======
+state_num : 10
+action_num : 3
+triple_num_per_graph : 10
+know_vocab_size : None
+vocab_size : None
+response_max_len : 100
+embed_dim : 300
+hidden_units : 512
+hidden_dim : 512
+num_layers : 1
+bidirectional : True
+rnn_hidden_size : 256
+dropout : 0.2
+attention_type : mlp
+train_stage : natural
+ppn_dq : False
+max_context_turn : 10
+max_sentence_word : 100
+max_target_word : 100
+s_copy_lambda : 1.0
+a_copy_lambda : 1.0
+copy_lambda_decay_interval : 10000
+copy_lambda_decay_value : 1.0
+state_action_copy_lambda_mini : 1.0
+init_tau : 1.0
+tau_mini : 0.1
+tau_decay_interval : 5000
+tau_decay_rate : 0.5
+mask_state_prob : False
+node_embed_dim : 128
+with_weak_action : False
+training_sampling_times : 5
+attn_history_sentence : True
+with_state_know : True
+with_action_know : True
+with_copy : True
+GATConfig : <class 'resource.option.vrbot_option.VRBotOption.GATConfig'>
+max_node_num1 : 100
+max_node_num2 : 50
+single_node_max_triple1 : 10
+single_node_max_triple2 : 5
+======= VRBotOption END =======
+
+10/04/2021 01:51:31 [main.py 58] main - INFO: PREPARE DATA
+10/04/2021 01:51:31 [main.py 26] main - INFO: preparing sessions
+10/04/2021 01:51:32 [load_data.py 16] main - INFO: 
+read session from data/meddg_train.zip
+10/04/2021 01:51:38 [load_data.py 16] main - INFO: 
+read session from data/meddg_test.zip
+10/04/2021 01:51:39 [load_data.py 16] main - INFO: 
+read session from data/meddg_valid.zip
+10/04/2021 01:51:41 [main.py 30] main - INFO: preparing vocab
+10/04/2021 01:51:41 [vocab.py 22] main.vocab - INFO: Vocab, size=19999, <sos>,<eos>,<pad> ... 凉炸酒,肾病科,沙子,水垢,<_>
+10/04/2021 01:51:41 [vocab.py 22] main.vocab - INFO: Vocab, size=164, <sos>,<eos>,<pad> ... 精神不振,时长,肛周疼痛,气促,月经紊乱
+10/04/2021 01:51:46 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 01] START - INFERENCE TRAINING
+10/04/2021 01:59:29 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 000200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 5.0177 a-nll: 4.9136 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0010 sa-l: 2.6690 aa-l: 5.8558
+10/04/2021 02:07:29 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 000400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 4.6810 a-nll: 4.4924 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0002 sa-l: 2.3711 aa-l: 4.5212
+10/04/2021 02:15:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 000600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 4.4009 a-nll: 4.2334 s-kl: 0.0033 a-kl: 2.1185 i-l: 0.0001 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 02:23:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 000800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 4.5098 a-nll: 4.3727 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0001 sa-l: 1.7017 aa-l: 4.4918
+10/04/2021 02:31:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 001000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 4.3887 a-nll: 4.2421 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.5870 aa-l: 4.1720
+10/04/2021 02:38:56 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 001200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.8937 a-nll: 3.7460 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 2.0261 aa-l: 3.6020
+10/04/2021 02:46:30 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 001400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 4.3077 a-nll: 4.1363 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 2.0856 aa-l: 5.0758
+10/04/2021 02:54:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 001600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 4.1717 a-nll: 3.9454 s-kl: 0.0096 a-kl: 2.8687 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:02:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 00 STEP 001800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 4.0235 a-nll: 3.8790 s-kl: 0.0035 a-kl: 2.2878 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:06:53 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 01] FINISHED - INFERENCE TRAINING
+10/04/2021 03:06:53 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 02] START - INFERENCE TRAINING
+10/04/2021 03:09:57 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 002000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.7133 a-nll: 3.6108 s-kl: 0.0063 a-kl: 1.6037 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:17:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 002200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.3771 a-nll: 3.1894 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.4632 aa-l: 3.6042
+10/04/2021 03:25:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 002400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.9529 a-nll: 3.8468 s-kl: 0.0049 a-kl: 2.1158 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:33:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 002600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.4397 a-nll: 3.2812 s-kl: 0.0073 a-kl: 2.0741 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:41:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 002800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.6591 a-nll: 3.4975 s-kl: 0.0067 a-kl: 1.5716 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:48:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 003000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.8179 a-nll: 3.5503 s-kl: 0.0061 a-kl: 2.6059 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 03:56:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 003200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.7817 a-nll: 3.6177 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.9408 aa-l: 3.8921
+10/04/2021 04:04:22 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 003400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.6254 a-nll: 3.4853 s-kl: 0.0062 a-kl: 1.7855 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 04:11:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 003600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.5433 a-nll: 3.4082 s-kl: 0.0077 a-kl: 1.8568 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 04:19:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 01 STEP 003800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.4754 a-nll: 3.3689 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.1288 aa-l: 3.0875
+10/04/2021 04:21:21 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 02] FINISHED - INFERENCE TRAINING
+10/04/2021 04:21:21 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 03] START - INFERENCE TRAINING
+10/04/2021 04:27:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 004000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 4.0559 a-nll: 3.8058 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.6442 aa-l: 4.2262
+10/04/2021 04:34:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 004200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.5464 a-nll: 3.4959 s-kl: 0.0116 a-kl: 1.7299 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 04:42:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 004400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.2682 a-nll: 3.1179 s-kl: 0.0074 a-kl: 2.0774 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 04:50:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 004600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0091 a-nll: 2.8357 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.5930 aa-l: 3.7191
+10/04/2021 04:58:12 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 004800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.2728 a-nll: 3.0739 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8820 aa-l: 3.4010
+10/04/2021 05:05:40 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 005000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.2627 a-nll: 3.1374 s-kl: 0.0106 a-kl: 1.5606 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 05:05:41 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/04/2021 05:13:19 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 005200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.1655 a-nll: 3.0335 s-kl: 0.0083 a-kl: 1.8048 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 05:20:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 005400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.4532 a-nll: 3.2464 s-kl: 0.0100 a-kl: 2.2280 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 05:28:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 02 STEP 005600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.1259 a-nll: 2.9152 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.9602 aa-l: 3.3430
+10/04/2021 05:34:46 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 03] FINISHED - INFERENCE TRAINING
+10/04/2021 05:34:46 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 04] START - INFERENCE TRAINING
+10/04/2021 05:36:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 005800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.4543 a-nll: 3.3420 s-kl: 0.0201 a-kl: 1.5635 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 05:43:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 006000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.4476 a-nll: 3.2741 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8978 aa-l: 3.0410
+10/04/2021 05:51:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 006200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5804 a-nll: 2.4067 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.0274 aa-l: 3.4809
+10/04/2021 05:59:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 006400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0187 a-nll: 2.8637 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.0566 aa-l: 3.9157
+10/04/2021 06:07:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 006600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.1009 a-nll: 2.9493 s-kl: 0.0182 a-kl: 2.4051 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 06:14:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 006800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0539 a-nll: 2.8671 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.4080 aa-l: 3.8897
+10/04/2021 06:22:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 007000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.2348 a-nll: 3.0745 s-kl: 0.0263 a-kl: 1.9114 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 06:29:47 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 007200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.0700 a-nll: 2.9435 s-kl: 0.0208 a-kl: 1.7111 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 06:37:38 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 007400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.1251 a-nll: 3.0528 s-kl: 0.0160 a-kl: 1.4385 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 06:45:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 03 STEP 007600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.2145 a-nll: 3.0800 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8009 aa-l: 3.8334
+10/04/2021 06:48:19 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 04] FINISHED - INFERENCE TRAINING
+10/04/2021 06:48:19 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 05] START - INFERENCE TRAINING
+10/04/2021 06:52:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 007800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.9406 a-nll: 2.7807 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8872 aa-l: 3.4203
+10/04/2021 07:00:25 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 008000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.4094 a-nll: 3.2773 s-kl: 0.0122 a-kl: 1.8041 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 07:08:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 008200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.1139 a-nll: 3.0441 s-kl: 0.0118 a-kl: 1.2613 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 07:15:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 008400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.9032 a-nll: 2.7458 s-kl: 0.0114 a-kl: 1.6634 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 07:23:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 008600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.2472 a-nll: 3.1094 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7336 aa-l: 3.5677
+10/04/2021 07:31:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 008800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.8594 a-nll: 2.7456 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7331 aa-l: 3.2986
+10/04/2021 07:38:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 009000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0706 a-nll: 2.8873 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6545 aa-l: 3.6115
+10/04/2021 07:46:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 009200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.8327 a-nll: 2.7105 s-kl: 0.0197 a-kl: 1.7585 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 07:54:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 009400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0372 a-nll: 2.8670 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.0326 aa-l: 3.9635
+10/04/2021 08:02:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 04 STEP 009600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 4.2580 a-nll: 4.2248 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.2954 aa-l: 3.5193
+10/04/2021 08:02:05 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 05] FINISHED - INFERENCE TRAINING
+10/04/2021 08:02:05 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 06] START - INFERENCE TRAINING
+10/04/2021 08:09:37 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 009800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.3655 a-nll: 3.2219 s-kl: 0.0114 a-kl: 1.7209 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 08:17:25 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 010000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0015 a-nll: 2.9294 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8417 aa-l: 2.9261
+10/04/2021 08:17:26 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/04/2021 08:17:26 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/04/2021 08:21:47 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/04/2021 08:21:47 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/5-10000-valid-(0.1087-0.0633-0.0409-0.0293).txt
+10/04/2021 08:21:47 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/5-10000-valid-(0.1087-0.0633-0.0409-0.0293).txt with 1993 sessions
+10/04/2021 08:21:48 [writer4json.py 22] main.json_writer - INFO: dump done in 0.18561935424804688 seconds
+10/04/2021 08:21:48 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 5 STEP 10000
+10/04/2021 08:21:48 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/5-10000-(0.1087-0.0633-0.0409-0.0293).model.ckpt
+10/04/2021 08:21:48 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/04/2021 08:21:48 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/04/2021 08:24:04 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/04/2021 08:24:05 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/5-10000-test-(0.1070-0.0615-0.0393-0.0277).txt
+10/04/2021 08:24:05 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/5-10000-test-(0.1070-0.0615-0.0393-0.0277).txt with 996 sessions
+10/04/2021 08:24:05 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09466719627380371 seconds
+10/04/2021 08:31:47 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 010200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.2062 a-nll: 3.1120 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7045 aa-l: 3.5368
+10/04/2021 08:39:19 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 010400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5529 a-nll: 2.3928 s-kl: 0.0139 a-kl: 1.7290 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 08:47:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 010600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.2422 a-nll: 3.1429 s-kl: 0.0132 a-kl: 1.6951 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 08:54:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 010800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.1202 a-nll: 2.9914 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.0896 aa-l: 2.4733
+10/04/2021 09:02:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 011000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.1792 a-nll: 3.0650 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8122 aa-l: 2.9231
+10/04/2021 09:10:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 011200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.0924 a-nll: 3.0104 s-kl: 0.0147 a-kl: 1.5825 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 09:17:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 05 STEP 011400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0286 a-nll: 2.9284 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7057 aa-l: 3.4116
+10/04/2021 09:22:41 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 06] FINISHED - INFERENCE TRAINING
+10/04/2021 09:22:41 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 07] START - INFERENCE TRAINING
+10/04/2021 09:25:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 011600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0331 a-nll: 2.9056 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8151 aa-l: 2.7139
+10/04/2021 09:33:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 011800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.9515 a-nll: 2.8879 s-kl: 0.0091 a-kl: 1.3877 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 09:41:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 012000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.8586 a-nll: 2.7118 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6003 aa-l: 2.8718
+10/04/2021 09:48:56 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 012200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6743 a-nll: 2.5653 s-kl: 0.0102 a-kl: 1.5034 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 09:56:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 012400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5969 a-nll: 2.4676 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7053 aa-l: 2.5863
+10/04/2021 10:04:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 012600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2522 a-nll: 2.0614 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5967 aa-l: 2.4191
+10/04/2021 10:12:19 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 012800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.1178 a-nll: 2.9989 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 1.1523 aa-l: 2.7853
+10/04/2021 10:19:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 013000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0470 a-nll: 2.9410 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7800 aa-l: 2.4982
+10/04/2021 10:27:38 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 013200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 3.0923 a-nll: 3.0139 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.9154 aa-l: 3.1295
+10/04/2021 10:35:09 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 06 STEP 013400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.8077 a-nll: 2.6837 s-kl: 0.0133 a-kl: 1.2514 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 10:36:41 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 07] FINISHED - INFERENCE TRAINING
+10/04/2021 10:36:41 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 08] START - INFERENCE TRAINING
+10/04/2021 10:42:50 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 013600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.8401 a-nll: 2.7443 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5849 aa-l: 2.1544
+10/04/2021 10:50:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 013800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7521 a-nll: 2.6433 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4947 aa-l: 2.6762
+10/04/2021 10:58:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 014000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6658 a-nll: 2.5262 s-kl: 0.0141 a-kl: 2.0721 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 11:06:19 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 014200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5225 a-nll: 2.4144 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7985 aa-l: 2.6623
+10/04/2021 11:14:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 014400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6947 a-nll: 2.5392 s-kl: 0.0242 a-kl: 2.0616 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 11:21:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 014600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7583 a-nll: 2.6925 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6855 aa-l: 2.1462
+10/04/2021 11:29:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 014800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.8350 a-nll: 2.6789 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6080 aa-l: 2.3686
+10/04/2021 11:36:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 015000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7829 a-nll: 2.6539 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5391 aa-l: 2.6164
+10/04/2021 11:36:56 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/04/2021 11:44:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 07 STEP 015200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4845 a-nll: 2.3742 s-kl: 0.0293 a-kl: 1.5642 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 11:50:51 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 08] FINISHED - INFERENCE TRAINING
+10/04/2021 11:50:51 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 09] START - INFERENCE TRAINING
+10/04/2021 11:52:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 015400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3700 a-nll: 2.1785 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7983 aa-l: 3.2879
+10/04/2021 11:59:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 015600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3674 a-nll: 2.2192 s-kl: 0.0263 a-kl: 1.5372 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 12:07:17 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 015800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7539 a-nll: 2.5978 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7720 aa-l: 2.6324
+10/04/2021 12:15:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 016000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6558 a-nll: 2.5834 s-kl: 0.0278 a-kl: 1.8379 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 12:22:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 016200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7841 a-nll: 2.6837 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5906 aa-l: 2.1591
+10/04/2021 12:30:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 016400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.8274 a-nll: 2.7179 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8263 aa-l: 2.5662
+10/04/2021 12:38:12 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 016600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.6357 a-nll: 2.5547 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5484 aa-l: 1.8960
+10/04/2021 12:46:03 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 016800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5130 a-nll: 2.3953 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4621 aa-l: 2.3762
+10/04/2021 12:54:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 017000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.8861 a-nll: 2.7504 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7311 aa-l: 2.2904
+10/04/2021 13:01:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 08 STEP 017200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5174 a-nll: 2.3262 s-kl: 0.0169 a-kl: 1.6455 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 13:04:36 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 09] FINISHED - INFERENCE TRAINING
+10/04/2021 13:04:36 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 10] START - INFERENCE TRAINING
+10/04/2021 13:09:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 017400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.7358 a-nll: 2.6415 s-kl: 0.0161 a-kl: 1.7658 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 13:16:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 017600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5804 a-nll: 2.4096 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6614 aa-l: 2.5377
+10/04/2021 13:23:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 017800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6054 a-nll: 2.4425 s-kl: 0.0328 a-kl: 1.8099 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 13:31:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 018000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.8392 a-nll: 2.7710 s-kl: 0.0150 a-kl: 1.6509 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 13:39:25 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 018200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6721 a-nll: 2.5211 s-kl: 0.0483 a-kl: 1.7749 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 13:47:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 018400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5839 a-nll: 2.4785 s-kl: 0.0333 a-kl: 1.7485 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 13:54:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 018600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4165 a-nll: 2.2059 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7768 aa-l: 2.5075
+10/04/2021 14:02:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 018800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6710 a-nll: 2.4618 s-kl: 0.0194 a-kl: 2.0890 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 14:09:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 019000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5422 a-nll: 2.3745 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6070 aa-l: 2.8133
+10/04/2021 14:17:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 09 STEP 019200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7797 a-nll: 2.6160 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0760 aa-l: 2.6955
+10/04/2021 14:17:21 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 10] FINISHED - INFERENCE TRAINING
+10/04/2021 14:17:21 [vrbot_engine.py 32] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/vrbot/fb7574e5/10-19205-train.model.ckpt
+10/04/2021 14:17:22 [vrbot_engine.py 34] main.engine - INFO: DUMPING CKPT DONE
+10/04/2021 14:17:22 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 11] START - INFERENCE TRAINING
+10/04/2021 14:24:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 019400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5451 a-nll: 2.3527 s-kl: 0.0224 a-kl: 2.4869 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 14:32:12 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 019600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.8196 a-nll: 2.6263 s-kl: 0.0186 a-kl: 2.5117 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 14:39:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 019800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5961 a-nll: 2.4541 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4234 aa-l: 2.2471
+10/04/2021 14:47:22 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 020000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5989 a-nll: 2.4893 s-kl: 0.0276 a-kl: 1.5678 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 14:47:23 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/04/2021 14:47:23 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/04/2021 14:51:49 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/04/2021 14:51:50 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/10-20000-valid-(0.1403-0.0818-0.0549-0.0408).txt
+10/04/2021 14:51:50 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/10-20000-valid-(0.1403-0.0818-0.0549-0.0408).txt with 1993 sessions
+10/04/2021 14:51:50 [writer4json.py 22] main.json_writer - INFO: dump done in 0.21231555938720703 seconds
+10/04/2021 14:51:50 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 10 STEP 20000
+10/04/2021 14:51:50 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/10-20000-(0.1403-0.0818-0.0549-0.0408).model.ckpt
+10/04/2021 14:51:51 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/04/2021 14:51:51 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/04/2021 14:54:14 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/04/2021 14:54:14 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/10-20000-test-(0.1394-0.0800-0.0522-0.0379).txt
+10/04/2021 14:54:14 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/10-20000-test-(0.1394-0.0800-0.0522-0.0379).txt with 996 sessions
+10/04/2021 14:54:14 [writer4json.py 22] main.json_writer - INFO: dump done in 0.0977015495300293 seconds
+10/04/2021 15:01:57 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 020200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5752 a-nll: 2.4397 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5749 aa-l: 2.2989
+10/04/2021 15:09:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 020400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.6791 a-nll: 2.5560 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7687 aa-l: 2.0173
+10/04/2021 15:17:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 020600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 3.0140 a-nll: 2.8541 s-kl: 0.1380 a-kl: 1.6165 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 15:25:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 020800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5933 a-nll: 2.4837 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4800 aa-l: 2.0944
+10/04/2021 15:33:13 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 10 STEP 021000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6649 a-nll: 2.4199 s-kl: 0.0426 a-kl: 2.2949 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 15:37:57 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 11] FINISHED - INFERENCE TRAINING
+10/04/2021 15:37:57 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 12] START - INFERENCE TRAINING
+10/04/2021 15:40:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 021200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6266 a-nll: 2.4770 s-kl: 0.0204 a-kl: 2.3545 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 15:48:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 021400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2536 a-nll: 2.1770 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2781 aa-l: 1.3294
+10/04/2021 15:56:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 021600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5833 a-nll: 2.4304 s-kl: 0.0305 a-kl: 1.5299 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 16:03:53 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 021800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.7301 a-nll: 2.5475 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4732 aa-l: 2.2573
+10/04/2021 16:11:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 022000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3693 a-nll: 2.2544 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4544 aa-l: 2.1508
+10/04/2021 16:19:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 022200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.9417 a-nll: 2.8382 s-kl: 0.0182 a-kl: 2.1653 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 16:26:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 022400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6675 a-nll: 2.5767 s-kl: 0.0297 a-kl: 1.8051 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 16:34:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 022600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4937 a-nll: 2.3739 s-kl: 0.0367 a-kl: 1.6488 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 16:41:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 022800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3350 a-nll: 2.1690 s-kl: 0.0463 a-kl: 1.9264 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 16:49:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 11 STEP 023000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4271 a-nll: 2.3734 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4416 aa-l: 1.5621
+10/04/2021 16:50:58 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 12] FINISHED - INFERENCE TRAINING
+10/04/2021 16:50:58 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 13] START - INFERENCE TRAINING
+10/04/2021 16:56:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 023200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1778 a-nll: 2.0933 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5194 aa-l: 1.8870
+10/04/2021 17:03:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 023400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5115 a-nll: 2.3851 s-kl: 0.0181 a-kl: 1.5439 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:11:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 023600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4623 a-nll: 2.3359 s-kl: 0.0166 a-kl: 1.6394 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:19:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 023800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2759 a-nll: 2.2316 s-kl: 0.0251 a-kl: 1.8895 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:27:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 024000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.6246 a-nll: 2.5518 s-kl: 0.0625 a-kl: 1.7293 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:34:53 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 024200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2189 a-nll: 2.0631 s-kl: 0.0561 a-kl: 1.8598 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:42:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 024400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5479 a-nll: 2.4099 s-kl: 0.0274 a-kl: 2.0609 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:50:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 024600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.7538 a-nll: 2.6605 s-kl: 0.0280 a-kl: 2.2616 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 17:58:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 12 STEP 024800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.6238 a-nll: 2.5289 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.9079 aa-l: 2.1298
+10/04/2021 18:04:46 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 13] FINISHED - INFERENCE TRAINING
+10/04/2021 18:04:46 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 14] START - INFERENCE TRAINING
+10/04/2021 18:05:47 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 025000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2459 a-nll: 2.1387 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5431 aa-l: 1.8801
+10/04/2021 18:05:48 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/04/2021 18:13:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 025200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2950 a-nll: 2.2537 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6547 aa-l: 1.5634
+10/04/2021 18:21:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 025400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3539 a-nll: 2.3074 s-kl: 0.0284 a-kl: 1.3417 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 18:28:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 025600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3617 a-nll: 2.1978 s-kl: 0.0227 a-kl: 2.0623 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 18:35:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 025800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4315 a-nll: 2.2941 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6141 aa-l: 1.8916
+10/04/2021 18:43:37 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 026000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2583 a-nll: 2.1224 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5157 aa-l: 2.0505
+10/04/2021 18:51:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 026200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3762 a-nll: 2.2601 s-kl: 0.0332 a-kl: 1.7285 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 18:58:50 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 026400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5167 a-nll: 2.4022 s-kl: 0.0280 a-kl: 1.6500 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 19:06:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 026600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4189 a-nll: 2.3175 s-kl: 0.0336 a-kl: 1.9041 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 19:14:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 13 STEP 026800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1999 a-nll: 2.0956 s-kl: 0.0269 a-kl: 1.5796 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 19:17:49 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 14] FINISHED - INFERENCE TRAINING
+10/04/2021 19:17:49 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 15] START - INFERENCE TRAINING
+10/04/2021 19:21:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 027000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1615 a-nll: 2.1027 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4107 aa-l: 1.2066
+10/04/2021 19:29:25 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 027200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3586 a-nll: 2.2406 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6438 aa-l: 1.5526
+10/04/2021 19:36:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 027400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5004 a-nll: 2.3519 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.8112 aa-l: 2.1107
+10/04/2021 19:44:22 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 027600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4519 a-nll: 2.3459 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2522 aa-l: 1.8984
+10/04/2021 19:52:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 027800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5457 a-nll: 2.3947 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3036 aa-l: 1.5064
+10/04/2021 20:00:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 028000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2216 a-nll: 2.1141 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3793 aa-l: 1.3870
+10/04/2021 20:07:37 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 028200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4429 a-nll: 2.2593 s-kl: 0.0220 a-kl: 2.3187 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 20:15:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 028400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3453 a-nll: 2.2299 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5098 aa-l: 1.8283
+10/04/2021 20:22:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 028600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5297 a-nll: 2.4690 s-kl: 0.0331 a-kl: 1.6970 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 20:30:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 14 STEP 028800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2412 a-nll: 2.0986 s-kl: 0.0372 a-kl: 1.7415 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 20:31:07 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 15] FINISHED - INFERENCE TRAINING
+10/04/2021 20:31:07 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 16] START - INFERENCE TRAINING
+10/04/2021 20:38:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 029000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2627 a-nll: 2.1397 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4938 aa-l: 1.4107
+10/04/2021 20:46:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 029200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2828 a-nll: 2.1655 s-kl: 0.0291 a-kl: 1.5801 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 20:53:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 029400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0953 a-nll: 2.0333 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3817 aa-l: 1.5725
+10/04/2021 21:01:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 029600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.7344 a-nll: 2.5685 s-kl: 0.0308 a-kl: 2.2082 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 21:09:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 029800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4211 a-nll: 2.3158 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4830 aa-l: 1.3397
+10/04/2021 21:16:57 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 030000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4704 a-nll: 2.3660 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3895 aa-l: 1.8868
+10/04/2021 21:16:59 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/04/2021 21:16:59 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/04/2021 21:21:21 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/04/2021 21:21:22 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/15-30000-valid-(0.1501-0.0865-0.0572-0.0421).txt
+10/04/2021 21:21:22 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/15-30000-valid-(0.1501-0.0865-0.0572-0.0421).txt with 1993 sessions
+10/04/2021 21:21:22 [writer4json.py 22] main.json_writer - INFO: dump done in 0.1726984977722168 seconds
+10/04/2021 21:21:22 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 15 STEP 30000
+10/04/2021 21:21:22 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/15-30000-(0.1501-0.0865-0.0572-0.0421).model.ckpt
+10/04/2021 21:21:22 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/04/2021 21:21:22 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/04/2021 21:23:41 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/04/2021 21:23:41 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/15-30000-test-(0.1456-0.0829-0.0534-0.0386).txt
+10/04/2021 21:23:42 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/15-30000-test-(0.1456-0.0829-0.0534-0.0386).txt with 996 sessions
+10/04/2021 21:23:42 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09895658493041992 seconds
+10/04/2021 21:31:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 030200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3192 a-nll: 2.2465 s-kl: 0.0167 a-kl: 1.5285 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 21:38:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 030400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2465 a-nll: 2.1164 s-kl: 0.0255 a-kl: 1.8252 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 21:46:16 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 15 STEP 030600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2185 a-nll: 2.1588 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3835 aa-l: 0.9444
+10/04/2021 21:51:29 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 16] FINISHED - INFERENCE TRAINING
+10/04/2021 21:51:29 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 17] START - INFERENCE TRAINING
+10/04/2021 21:53:56 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 030800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1974 a-nll: 2.0807 s-kl: 0.0275 a-kl: 1.5237 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 22:01:40 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 031000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0998 a-nll: 2.0269 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2249 aa-l: 1.2869
+10/04/2021 22:09:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 031200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1343 a-nll: 2.0259 s-kl: 0.0744 a-kl: 1.9458 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 22:17:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 031400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2822 a-nll: 2.1762 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3027 aa-l: 1.0282
+10/04/2021 22:24:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 031600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1103 a-nll: 1.9893 s-kl: 0.0475 a-kl: 1.4366 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 22:32:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 031800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2367 a-nll: 2.2032 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.6219 aa-l: 1.5816
+10/04/2021 22:39:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 032000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1296 a-nll: 2.0018 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3962 aa-l: 1.9502
+10/04/2021 22:47:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 032200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2071 a-nll: 2.1320 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5299 aa-l: 1.3870
+10/04/2021 22:55:25 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 032400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2410 a-nll: 2.2048 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4511 aa-l: 1.2342
+10/04/2021 23:03:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 16 STEP 032600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.7258 a-nll: 2.6627 s-kl: 0.0521 a-kl: 1.9616 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 23:04:58 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 17] FINISHED - INFERENCE TRAINING
+10/04/2021 23:04:58 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 18] START - INFERENCE TRAINING
+10/04/2021 23:10:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 032800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0801 a-nll: 2.0418 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1567 aa-l: 1.1564
+10/04/2021 23:17:50 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 033000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3553 a-nll: 2.2623 s-kl: 0.0280 a-kl: 2.0540 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 23:25:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 033200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.5779 a-nll: 2.4811 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4339 aa-l: 1.6567
+10/04/2021 23:33:12 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 033400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4756 a-nll: 2.3790 s-kl: 0.0215 a-kl: 1.7384 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 23:40:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 033600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4290 a-nll: 2.3397 s-kl: 0.0399 a-kl: 1.7322 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/04/2021 23:48:34 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 033800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4650 a-nll: 2.4189 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3564 aa-l: 1.0828
+10/04/2021 23:56:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 034000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1352 a-nll: 2.0224 s-kl: 0.0239 a-kl: 1.9741 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 00:03:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 034200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3755 a-nll: 2.3381 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2244 aa-l: 1.0955
+10/05/2021 00:11:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 17 STEP 034400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2315 a-nll: 2.1630 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2767 aa-l: 1.4242
+10/05/2021 00:17:54 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 18] FINISHED - INFERENCE TRAINING
+10/05/2021 00:17:54 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 19] START - INFERENCE TRAINING
+10/05/2021 00:18:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 034600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5072 a-nll: 2.4594 s-kl: 0.1109 a-kl: 1.6988 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 00:25:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 034800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4191 a-nll: 2.3777 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3334 aa-l: 1.1757
+10/05/2021 00:33:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 035000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2979 a-nll: 2.1671 s-kl: 0.0535 a-kl: 2.0165 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 00:33:24 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 00:41:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 035200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3652 a-nll: 2.2975 s-kl: 0.0210 a-kl: 1.4942 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 00:48:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 035400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5267 a-nll: 2.4139 s-kl: 0.0309 a-kl: 1.9029 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 00:56:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 035600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2810 a-nll: 2.2110 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3731 aa-l: 1.2226
+10/05/2021 01:04:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 035800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2613 a-nll: 2.1636 s-kl: 0.0200 a-kl: 1.9709 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 01:11:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 036000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.2946 a-nll: 2.2032 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0852 aa-l: 0.9972
+10/05/2021 01:19:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 036200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4322 a-nll: 2.3996 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.5897 aa-l: 0.9316
+10/05/2021 01:27:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 18 STEP 036400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9277 a-nll: 1.9006 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3426 aa-l: 0.9557
+10/05/2021 01:30:51 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 19] FINISHED - INFERENCE TRAINING
+10/05/2021 01:30:51 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 20] START - INFERENCE TRAINING
+10/05/2021 01:34:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 036600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0278 a-nll: 1.9421 s-kl: 0.0544 a-kl: 2.0144 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 01:42:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 036800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9114 a-nll: 1.8563 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2303 aa-l: 1.0897
+10/05/2021 01:49:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 037000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.4145 a-nll: 2.3149 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2191 aa-l: 1.0686
+10/05/2021 01:57:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 037200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3500 a-nll: 2.2243 s-kl: 0.0186 a-kl: 1.9200 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 02:05:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 037400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0275 a-nll: 1.8878 s-kl: 0.0460 a-kl: 2.1956 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 02:12:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 037600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3997 a-nll: 2.3122 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3077 aa-l: 1.0211
+10/05/2021 02:20:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 037800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0133 a-nll: 1.9264 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3244 aa-l: 1.1387
+10/05/2021 02:27:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 038000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0752 a-nll: 1.9918 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4241 aa-l: 1.2178
+10/05/2021 02:35:50 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 038200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1633 a-nll: 2.0298 s-kl: 0.0401 a-kl: 1.5067 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 02:43:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 19 STEP 038400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1227 a-nll: 2.0424 s-kl: 0.0323 a-kl: 2.2864 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 02:44:22 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 20] FINISHED - INFERENCE TRAINING
+10/05/2021 02:44:22 [vrbot_engine.py 32] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/vrbot/fb7574e5/20-38426-train.model.ckpt
+10/05/2021 02:44:23 [vrbot_engine.py 34] main.engine - INFO: DUMPING CKPT DONE
+10/05/2021 02:44:23 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 21] START - INFERENCE TRAINING
+10/05/2021 02:50:53 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 038600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1340 a-nll: 1.9717 s-kl: 0.0307 a-kl: 2.1750 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 02:58:47 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 038800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1073 a-nll: 1.9394 s-kl: 0.0277 a-kl: 2.3598 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 03:06:33 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 039000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1115 a-nll: 2.0076 s-kl: 0.0396 a-kl: 1.5438 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 03:14:09 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 039200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2522 a-nll: 2.2012 s-kl: 0.0378 a-kl: 1.5883 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 03:21:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 039400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4654 a-nll: 2.3224 s-kl: 0.0238 a-kl: 1.6790 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 03:29:17 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 039600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2409 a-nll: 2.1163 s-kl: 0.0205 a-kl: 1.8073 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 03:37:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 039800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9305 a-nll: 1.8590 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3268 aa-l: 1.1371
+10/05/2021 03:44:47 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 040000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8788 a-nll: 1.8244 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1837 aa-l: 0.8549
+10/05/2021 03:44:48 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 03:44:48 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/05/2021 03:49:11 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/05/2021 03:49:12 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/20-40000-valid-(0.1604-0.0938-0.0635-0.0478).txt
+10/05/2021 03:49:12 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/20-40000-valid-(0.1604-0.0938-0.0635-0.0478).txt with 1993 sessions
+10/05/2021 03:49:12 [writer4json.py 22] main.json_writer - INFO: dump done in 0.18838095664978027 seconds
+10/05/2021 03:49:12 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 20 STEP 40000
+10/05/2021 03:49:12 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/20-40000-(0.1604-0.0938-0.0635-0.0478).model.ckpt
+10/05/2021 03:49:13 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/05/2021 03:49:13 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/05/2021 03:51:29 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/05/2021 03:51:30 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/20-40000-test-(0.1543-0.0894-0.0596-0.0442).txt
+10/05/2021 03:51:30 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/20-40000-test-(0.1543-0.0894-0.0596-0.0442).txt with 996 sessions
+10/05/2021 03:51:30 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09767603874206543 seconds
+10/05/2021 03:59:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 20 STEP 040200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3174 a-nll: 2.2609 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.7659 aa-l: 0.8753
+10/05/2021 04:04:23 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 21] FINISHED - INFERENCE TRAINING
+10/05/2021 04:04:23 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 22] START - INFERENCE TRAINING
+10/05/2021 04:06:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 040400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9907 a-nll: 1.9479 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3562 aa-l: 0.8679
+10/05/2021 04:14:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 040600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3240 a-nll: 2.1826 s-kl: 0.0235 a-kl: 2.1725 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 04:22:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 040800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0185 a-nll: 1.8824 s-kl: 0.0169 a-kl: 2.0316 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 04:29:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 041000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9610 a-nll: 1.9319 s-kl: 0.0224 a-kl: 1.6548 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 04:37:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 041200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.3399 a-nll: 2.2574 s-kl: 0.0299 a-kl: 2.0990 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 04:44:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 041400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.3950 a-nll: 2.3615 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2997 aa-l: 1.0640
+10/05/2021 04:52:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 041600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2019 a-nll: 2.0605 s-kl: 0.0211 a-kl: 1.8182 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 05:00:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 041800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8533 a-nll: 1.8217 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2028 aa-l: 0.5839
+10/05/2021 05:07:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 042000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8634 a-nll: 1.8103 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2671 aa-l: 0.6329
+10/05/2021 05:15:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 21 STEP 042200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.4625 a-nll: 2.3898 s-kl: 0.0669 a-kl: 1.8331 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 05:17:37 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 22] FINISHED - INFERENCE TRAINING
+10/05/2021 05:17:37 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 23] START - INFERENCE TRAINING
+10/05/2021 05:22:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 042400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1335 a-nll: 2.0599 s-kl: 0.0453 a-kl: 1.9122 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 05:30:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 042600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1055 a-nll: 2.0795 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2959 aa-l: 0.8174
+10/05/2021 05:38:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 042800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8441 a-nll: 1.8134 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3359 aa-l: 0.7759
+10/05/2021 05:45:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 043000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9431 a-nll: 1.8248 s-kl: 0.0408 a-kl: 1.7673 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 05:53:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 043200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0271 a-nll: 1.9799 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1895 aa-l: 1.0587
+10/05/2021 06:01:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 043400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1714 a-nll: 2.0966 s-kl: 0.1174 a-kl: 2.0965 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 06:09:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 043600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0379 a-nll: 1.8945 s-kl: 0.0256 a-kl: 1.7470 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 06:16:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 043800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7533 a-nll: 1.7149 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2779 aa-l: 0.7390
+10/05/2021 06:24:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 22 STEP 044000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2910 a-nll: 2.2064 s-kl: 0.0413 a-kl: 1.2771 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 06:30:46 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 23] FINISHED - INFERENCE TRAINING
+10/05/2021 06:30:46 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 24] START - INFERENCE TRAINING
+10/05/2021 06:31:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 044200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9901 a-nll: 1.9620 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4665 aa-l: 0.9187
+10/05/2021 06:38:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 044400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1001 a-nll: 1.9865 s-kl: 0.0821 a-kl: 1.6756 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 06:46:29 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 044600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9371 a-nll: 1.8394 s-kl: 0.0280 a-kl: 1.5086 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 06:54:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 044800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0162 a-nll: 1.9506 s-kl: 0.0265 a-kl: 1.8974 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 07:01:40 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 045000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0237 a-nll: 1.9053 s-kl: 0.0227 a-kl: 1.6978 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 07:01:41 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 07:09:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 045200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9305 a-nll: 1.8748 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2843 aa-l: 0.9482
+10/05/2021 07:17:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 045400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0124 a-nll: 1.9726 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2127 aa-l: 0.7156
+10/05/2021 07:24:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 045600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7292 a-nll: 1.6302 s-kl: 0.1168 a-kl: 1.8203 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 07:32:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 045800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0953 a-nll: 2.0492 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1798 aa-l: 0.7549
+10/05/2021 07:40:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 23 STEP 046000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7995 a-nll: 1.7575 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2818 aa-l: 0.7989
+10/05/2021 07:43:56 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 24] FINISHED - INFERENCE TRAINING
+10/05/2021 07:43:56 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 25] START - INFERENCE TRAINING
+10/05/2021 07:47:37 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 046200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9721 a-nll: 1.9083 s-kl: 0.0221 a-kl: 1.6270 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 07:55:16 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 046400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1481 a-nll: 2.0057 s-kl: 0.0507 a-kl: 1.8424 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 08:02:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 046600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1777 a-nll: 2.0940 s-kl: 0.0780 a-kl: 1.7959 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 08:10:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 046800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7281 a-nll: 1.7054 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3892 aa-l: 0.6879
+10/05/2021 08:17:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 047000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0250 a-nll: 1.9784 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1064 aa-l: 0.6874
+10/05/2021 08:25:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 047200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1237 a-nll: 2.0641 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3148 aa-l: 0.8208
+10/05/2021 08:33:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 047400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0385 a-nll: 1.9460 s-kl: 0.0365 a-kl: 1.5406 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 08:40:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 047600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2663 a-nll: 2.2575 s-kl: 0.0768 a-kl: 1.3510 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 08:48:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 047800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1264 a-nll: 1.9710 s-kl: 0.0315 a-kl: 1.9161 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 08:56:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 24 STEP 048000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0633 a-nll: 1.9864 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2253 aa-l: 0.6709
+10/05/2021 08:56:51 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 25] FINISHED - INFERENCE TRAINING
+10/05/2021 08:56:51 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 26] START - INFERENCE TRAINING
+10/05/2021 09:03:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 048200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9573 a-nll: 1.9076 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1915 aa-l: 0.5871
+10/05/2021 09:11:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 048400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9611 a-nll: 1.9188 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1706 aa-l: 0.6889
+10/05/2021 09:18:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 048600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8546 a-nll: 1.8232 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2662 aa-l: 0.7320
+10/05/2021 09:26:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 048800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0420 a-nll: 1.9248 s-kl: 0.0286 a-kl: 1.9749 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 09:34:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 049000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9884 a-nll: 1.9689 s-kl: 0.0157 a-kl: 1.3678 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 09:41:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 049200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8135 a-nll: 1.7375 s-kl: 0.0247 a-kl: 1.3791 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 09:49:29 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 049400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6004 a-nll: 1.5621 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1398 aa-l: 0.4390
+10/05/2021 09:57:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 049600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2089 a-nll: 2.1633 s-kl: 0.0346 a-kl: 1.8335 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 10:04:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 25 STEP 049800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9382 a-nll: 1.8750 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1817 aa-l: 0.9555
+10/05/2021 10:10:07 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 26] FINISHED - INFERENCE TRAINING
+10/05/2021 10:10:07 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 27] START - INFERENCE TRAINING
+10/05/2021 10:12:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 050000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7333 a-nll: 1.7064 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1283 aa-l: 0.4506
+10/05/2021 10:12:20 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 10:12:20 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/05/2021 10:16:45 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/05/2021 10:16:46 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/26-50000-valid-(0.1644-0.0959-0.0655-0.0499).txt
+10/05/2021 10:16:46 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/26-50000-valid-(0.1644-0.0959-0.0655-0.0499).txt with 1993 sessions
+10/05/2021 10:16:46 [writer4json.py 22] main.json_writer - INFO: dump done in 0.18750476837158203 seconds
+10/05/2021 10:16:46 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 26 STEP 50000
+10/05/2021 10:16:46 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/26-50000-(0.1644-0.0959-0.0655-0.0499).model.ckpt
+10/05/2021 10:16:47 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/05/2021 10:16:47 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/05/2021 10:19:06 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/05/2021 10:19:06 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/26-50000-test-(0.1622-0.0938-0.0626-0.0467).txt
+10/05/2021 10:19:06 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/26-50000-test-(0.1622-0.0938-0.0626-0.0467).txt with 996 sessions
+10/05/2021 10:19:06 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09885001182556152 seconds
+10/05/2021 10:26:50 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 050200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1108 a-nll: 2.0266 s-kl: 0.0366 a-kl: 1.3821 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 10:34:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 050400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7651 a-nll: 1.7383 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2392 aa-l: 0.4444
+10/05/2021 10:41:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 050600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6976 a-nll: 1.6313 s-kl: 0.0263 a-kl: 1.4676 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 10:49:33 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 050800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0220 a-nll: 1.9439 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4523 aa-l: 0.8794
+10/05/2021 10:57:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 051000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8639 a-nll: 1.7556 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1587 aa-l: 0.8458
+10/05/2021 11:05:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 051200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8423 a-nll: 1.7527 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2436 aa-l: 0.5760
+10/05/2021 11:12:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 051400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0235 a-nll: 1.9177 s-kl: 0.0367 a-kl: 1.6351 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 11:20:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 051600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5997 a-nll: 1.4793 s-kl: 0.0527 a-kl: 1.6203 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 11:28:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 26 STEP 051800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0091 a-nll: 1.9923 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2012 aa-l: 0.7864
+10/05/2021 11:30:40 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 27] FINISHED - INFERENCE TRAINING
+10/05/2021 11:30:40 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 28] START - INFERENCE TRAINING
+10/05/2021 11:35:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 052000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6219 a-nll: 1.5745 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1796 aa-l: 0.5588
+10/05/2021 11:43:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 052200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7249 a-nll: 1.6574 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2166 aa-l: 0.6343
+10/05/2021 11:50:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 052400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1676 a-nll: 2.1004 s-kl: 0.0255 a-kl: 1.4125 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 11:58:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 052600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9572 a-nll: 1.8787 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1261 aa-l: 0.8374
+10/05/2021 12:05:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 052800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6003 a-nll: 1.5566 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1921 aa-l: 0.5508
+10/05/2021 12:13:38 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 053000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1012 a-nll: 2.0898 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2546 aa-l: 0.6436
+10/05/2021 12:21:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 053200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1154 a-nll: 2.0892 s-kl: 0.0194 a-kl: 1.5417 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 12:28:57 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 053400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0965 a-nll: 1.9969 s-kl: 0.0375 a-kl: 1.8235 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 12:36:47 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 27 STEP 053600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0711 a-nll: 2.0140 s-kl: 0.0358 a-kl: 1.1407 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 12:43:41 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 28] FINISHED - INFERENCE TRAINING
+10/05/2021 12:43:41 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 29] START - INFERENCE TRAINING
+10/05/2021 12:44:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 053800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5019 a-nll: 1.4868 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3723 aa-l: 0.6732
+10/05/2021 12:51:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 054000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9837 a-nll: 1.9351 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1350 aa-l: 0.5575
+10/05/2021 12:59:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 054200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4730 a-nll: 1.4431 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0898 aa-l: 0.4337
+10/05/2021 13:07:29 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 054400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9093 a-nll: 1.7718 s-kl: 0.0212 a-kl: 2.0982 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 13:15:17 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 054600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1224 a-nll: 2.0124 s-kl: 0.0416 a-kl: 1.8995 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 13:22:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 054800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0556 a-nll: 2.0080 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0984 aa-l: 0.9045
+10/05/2021 13:30:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 055000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1210 a-nll: 2.0913 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0859 aa-l: 0.9513
+10/05/2021 13:30:10 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 13:37:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 055200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8444 a-nll: 1.7927 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2358 aa-l: 0.6583
+10/05/2021 13:45:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 055400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8322 a-nll: 1.7861 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1993 aa-l: 0.8022
+10/05/2021 13:52:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 28 STEP 055600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8862 a-nll: 1.8069 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1312 aa-l: 0.6243
+10/05/2021 13:56:41 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 29] FINISHED - INFERENCE TRAINING
+10/05/2021 13:56:41 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 30] START - INFERENCE TRAINING
+10/05/2021 14:00:03 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 055800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9225 a-nll: 1.8015 s-kl: 0.0318 a-kl: 1.6429 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 14:07:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 056000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7235 a-nll: 1.6878 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2449 aa-l: 0.8529
+10/05/2021 14:15:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 056200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8780 a-nll: 1.7519 s-kl: 0.0308 a-kl: 1.7618 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 14:22:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 056400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7390 a-nll: 1.7208 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0896 aa-l: 0.4949
+10/05/2021 14:30:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 056600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9724 a-nll: 1.9836 s-kl: 0.0213 a-kl: 1.4154 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 14:38:40 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 056800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7263 a-nll: 1.7061 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1635 aa-l: 0.7854
+10/05/2021 14:46:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 057000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.1979 a-nll: 2.1374 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1387 aa-l: 0.5722
+10/05/2021 14:54:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 057200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8468 a-nll: 1.7443 s-kl: 0.0339 a-kl: 1.2497 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 15:01:53 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 057400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1105 a-nll: 2.0164 s-kl: 0.0247 a-kl: 1.4421 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 15:09:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 29 STEP 057600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8278 a-nll: 1.7929 s-kl: 0.0630 a-kl: 1.4517 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 15:10:39 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 30] FINISHED - INFERENCE TRAINING
+10/05/2021 15:10:39 [vrbot_engine.py 32] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/vrbot/fb7574e5/30-57628-train.model.ckpt
+10/05/2021 15:10:40 [vrbot_engine.py 34] main.engine - INFO: DUMPING CKPT DONE
+10/05/2021 15:10:40 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 31] START - INFERENCE TRAINING
+10/05/2021 15:17:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 057800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6433 a-nll: 1.5430 s-kl: 0.0272 a-kl: 1.5244 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 15:24:38 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 058000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7210 a-nll: 1.6898 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1174 aa-l: 0.5608
+10/05/2021 15:31:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 058200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9570 a-nll: 1.9214 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1746 aa-l: 0.7795
+10/05/2021 15:39:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 058400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8850 a-nll: 1.7865 s-kl: 0.0259 a-kl: 1.7189 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 15:47:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 058600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8696 a-nll: 1.8122 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1433 aa-l: 0.7674
+10/05/2021 15:54:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 058800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0813 a-nll: 1.9623 s-kl: 0.0697 a-kl: 1.5597 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 16:02:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 059000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8665 a-nll: 1.8131 s-kl: 0.0374 a-kl: 1.3414 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 16:10:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 059200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8547 a-nll: 1.7968 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2905 aa-l: 0.7082
+10/05/2021 16:17:53 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 30 STEP 059400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8887 a-nll: 1.8555 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0757 aa-l: 0.7570
+10/05/2021 16:23:40 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 31] FINISHED - INFERENCE TRAINING
+10/05/2021 16:23:40 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 32] START - INFERENCE TRAINING
+10/05/2021 16:25:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 059600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7322 a-nll: 1.7159 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1573 aa-l: 0.1989
+10/05/2021 16:33:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 059800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7241 a-nll: 1.7031 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2711 aa-l: 0.7630
+10/05/2021 16:41:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 060000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6383 a-nll: 1.5776 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2418 aa-l: 0.7742
+10/05/2021 16:41:12 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 16:41:12 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/05/2021 16:45:35 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/05/2021 16:45:36 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/31-60000-valid-(0.1703-0.0995-0.0685-0.0525).txt
+10/05/2021 16:45:36 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/31-60000-valid-(0.1703-0.0995-0.0685-0.0525).txt with 1993 sessions
+10/05/2021 16:45:36 [writer4json.py 22] main.json_writer - INFO: dump done in 0.18930912017822266 seconds
+10/05/2021 16:45:36 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 31 STEP 60000
+10/05/2021 16:45:36 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/31-60000-(0.1703-0.0995-0.0685-0.0525).model.ckpt
+10/05/2021 16:45:37 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/05/2021 16:45:37 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/05/2021 16:47:53 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/05/2021 16:47:54 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/31-60000-test-(0.1638-0.0944-0.0638-0.0482).txt
+10/05/2021 16:47:54 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/31-60000-test-(0.1638-0.0944-0.0638-0.0482).txt with 996 sessions
+10/05/2021 16:47:54 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09852170944213867 seconds
+10/05/2021 16:55:23 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 060200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8629 a-nll: 1.7461 s-kl: 0.0485 a-kl: 2.1724 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 17:03:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 060400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7671 a-nll: 1.7070 s-kl: 0.0290 a-kl: 1.4588 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 17:10:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 060600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 2.0648 a-nll: 2.0323 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1803 aa-l: 0.7287
+10/05/2021 17:18:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 060800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9444 a-nll: 1.9146 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1389 aa-l: 0.3793
+10/05/2021 17:26:09 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 061000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9494 a-nll: 1.8990 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1150 aa-l: 0.4529
+10/05/2021 17:33:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 061200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0012 a-nll: 1.8786 s-kl: 0.0123 a-kl: 1.5377 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 17:41:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 31 STEP 061400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8030 a-nll: 1.7775 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2025 aa-l: 0.4583
+10/05/2021 17:43:33 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 32] FINISHED - INFERENCE TRAINING
+10/05/2021 17:43:33 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 33] START - INFERENCE TRAINING
+10/05/2021 17:48:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 061600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7083 a-nll: 1.6808 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1475 aa-l: 0.5276
+10/05/2021 17:55:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 061800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0690 a-nll: 2.0016 s-kl: 0.0307 a-kl: 1.5613 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 18:03:29 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 062000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6074 a-nll: 1.5816 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0739 aa-l: 0.4248
+10/05/2021 18:10:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 062200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7312 a-nll: 1.6488 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1727 aa-l: 0.4858
+10/05/2021 18:18:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 062400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8968 a-nll: 1.8191 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2048 aa-l: 0.5285
+10/05/2021 18:26:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 062600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7990 a-nll: 1.7353 s-kl: 0.0283 a-kl: 1.7052 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 18:33:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 062800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8095 a-nll: 1.7668 s-kl: 0.0252 a-kl: 1.5976 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 18:41:19 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 063000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8018 a-nll: 1.7819 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1841 aa-l: 0.7452
+10/05/2021 18:49:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 32 STEP 063200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8761 a-nll: 1.7864 s-kl: 0.0433 a-kl: 1.5063 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 18:56:13 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 33] FINISHED - INFERENCE TRAINING
+10/05/2021 18:56:13 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 34] START - INFERENCE TRAINING
+10/05/2021 18:56:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 063400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8993 a-nll: 1.8544 s-kl: 0.0381 a-kl: 1.4115 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 19:04:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 063600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5943 a-nll: 1.5815 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1612 aa-l: 0.3445
+10/05/2021 19:11:30 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 063800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9123 a-nll: 1.8862 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1239 aa-l: 0.3576
+10/05/2021 19:19:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 064000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8396 a-nll: 1.7832 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0763 aa-l: 0.6083
+10/05/2021 19:26:32 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 064200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6968 a-nll: 1.6441 s-kl: 0.0206 a-kl: 1.6828 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 19:33:57 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 064400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9041 a-nll: 1.8730 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0775 aa-l: 0.3738
+10/05/2021 19:41:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 064600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8737 a-nll: 1.8547 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.4126 aa-l: 0.4165
+10/05/2021 19:49:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 064800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9870 a-nll: 1.9679 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1136 aa-l: 0.4679
+10/05/2021 19:56:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 065000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1307 a-nll: 2.0388 s-kl: 0.0385 a-kl: 1.9143 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 19:56:35 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 20:04:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 33 STEP 065200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9002 a-nll: 1.7961 s-kl: 0.0235 a-kl: 1.8525 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 20:08:22 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 34] FINISHED - INFERENCE TRAINING
+10/05/2021 20:08:22 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 35] START - INFERENCE TRAINING
+10/05/2021 20:11:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 065400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9019 a-nll: 1.8486 s-kl: 0.0716 a-kl: 1.7545 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 20:19:03 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 065600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5854 a-nll: 1.5250 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1666 aa-l: 0.5011
+10/05/2021 20:26:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 065800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8999 a-nll: 1.8073 s-kl: 0.0449 a-kl: 1.4363 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 20:34:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 066000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6528 a-nll: 1.6282 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1066 aa-l: 0.4730
+10/05/2021 20:41:56 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 066200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8628 a-nll: 1.8528 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3043 aa-l: 0.5102
+10/05/2021 20:49:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 066400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9903 a-nll: 1.9625 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2330 aa-l: 0.6391
+10/05/2021 20:57:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 066600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7916 a-nll: 1.7310 s-kl: 0.0181 a-kl: 1.4139 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:04:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 066800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0877 a-nll: 2.0222 s-kl: 0.0285 a-kl: 1.9244 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:12:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 067000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7497 a-nll: 1.7014 s-kl: 0.0489 a-kl: 1.3915 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:19:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 34 STEP 067200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7537 a-nll: 1.7343 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1795 aa-l: 0.3561
+10/05/2021 21:21:04 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 35] FINISHED - INFERENCE TRAINING
+10/05/2021 21:21:04 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 36] START - INFERENCE TRAINING
+10/05/2021 21:27:08 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 067400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6264 a-nll: 1.5362 s-kl: 0.0450 a-kl: 1.4159 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:34:37 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 067600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2451 a-nll: 2.1862 s-kl: 0.0247 a-kl: 1.4155 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:42:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 067800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8469 a-nll: 1.8123 s-kl: 0.0137 a-kl: 1.4705 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:50:03 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 068000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.1884 a-nll: 2.1189 s-kl: 0.0495 a-kl: 1.4581 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 21:57:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 068200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0655 a-nll: 2.0054 s-kl: 0.0371 a-kl: 1.2938 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 22:05:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 068400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9699 a-nll: 1.8784 s-kl: 0.0297 a-kl: 1.7534 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 22:13:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 068600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0232 a-nll: 1.9396 s-kl: 0.0380 a-kl: 1.7908 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 22:21:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 068800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7972 a-nll: 1.6882 s-kl: 0.0386 a-kl: 1.4044 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 22:29:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 35 STEP 069000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0566 a-nll: 1.9340 s-kl: 0.0255 a-kl: 2.2155 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 22:35:01 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 36] FINISHED - INFERENCE TRAINING
+10/05/2021 22:35:01 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 37] START - INFERENCE TRAINING
+10/05/2021 22:36:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 069200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8728 a-nll: 1.8258 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.3878 aa-l: 0.6482
+10/05/2021 22:44:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 069400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6325 a-nll: 1.6045 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1398 aa-l: 0.4968
+10/05/2021 22:52:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 069600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7123 a-nll: 1.6828 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1832 aa-l: 0.4752
+10/05/2021 22:59:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 069800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9097 a-nll: 1.8672 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1701 aa-l: 0.5166
+10/05/2021 23:07:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 070000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7166 a-nll: 1.6941 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2023 aa-l: 0.4343
+10/05/2021 23:07:41 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/05/2021 23:07:41 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/05/2021 23:12:06 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/05/2021 23:12:08 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/36-70000-valid-(0.1734-0.0999-0.0675-0.0512).txt
+10/05/2021 23:12:08 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/36-70000-valid-(0.1734-0.0999-0.0675-0.0512).txt with 1993 sessions
+10/05/2021 23:12:08 [writer4json.py 22] main.json_writer - INFO: dump done in 0.20230960845947266 seconds
+10/05/2021 23:12:08 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 36 STEP 70000
+10/05/2021 23:12:08 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/36-70000-(0.1734-0.0999-0.0675-0.0512).model.ckpt
+10/05/2021 23:12:08 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/05/2021 23:12:08 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/05/2021 23:14:28 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/05/2021 23:14:29 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/36-70000-test-(0.1689-0.0969-0.0647-0.0485).txt
+10/05/2021 23:14:29 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/36-70000-test-(0.1689-0.0969-0.0647-0.0485).txt with 996 sessions
+10/05/2021 23:14:29 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09986066818237305 seconds
+10/05/2021 23:22:13 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 070200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6738 a-nll: 1.6303 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2462 aa-l: 0.5464
+10/05/2021 23:30:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 070400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6109 a-nll: 1.6237 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1023 aa-l: 0.3958
+10/05/2021 23:38:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 070600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9554 a-nll: 1.8242 s-kl: 0.0548 a-kl: 1.9442 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 23:45:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 070800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8673 a-nll: 1.8121 s-kl: 0.0215 a-kl: 1.4916 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/05/2021 23:53:30 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 36 STEP 071000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4961 a-nll: 1.4909 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1519 aa-l: 0.3283
+10/05/2021 23:56:08 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 37] FINISHED - INFERENCE TRAINING
+10/05/2021 23:56:08 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 38] START - INFERENCE TRAINING
+10/06/2021 00:00:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 071200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6752 a-nll: 1.6486 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1773 aa-l: 0.4680
+10/06/2021 00:08:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 071400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4579 a-nll: 1.4171 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1531 aa-l: 0.4215
+10/06/2021 00:16:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 071600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5398 a-nll: 1.4788 s-kl: 0.0372 a-kl: 1.3133 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 00:24:33 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 071800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8624 a-nll: 1.8291 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1157 aa-l: 0.5702
+10/06/2021 00:31:57 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 072000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9073 a-nll: 1.8543 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1045 aa-l: 0.5089
+10/06/2021 00:39:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 072200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7286 a-nll: 1.6932 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0429 aa-l: 0.4256
+10/06/2021 00:47:19 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 072400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6286 a-nll: 1.5909 s-kl: 0.0326 a-kl: 1.4872 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 00:54:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 072600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4912 a-nll: 1.4852 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2190 aa-l: 0.6214
+10/06/2021 01:02:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 37 STEP 072800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5703 a-nll: 1.5709 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1042 aa-l: 0.3485
+10/06/2021 01:09:37 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 38] FINISHED - INFERENCE TRAINING
+10/06/2021 01:09:37 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 39] START - INFERENCE TRAINING
+10/06/2021 01:09:38 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 073000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.2793 a-nll: 1.2564 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2364 aa-l: 0.3424
+10/06/2021 01:16:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 073200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5826 a-nll: 1.5425 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1249 aa-l: 0.6762
+10/06/2021 01:24:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 073400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6436 a-nll: 1.6398 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1449 aa-l: 0.3286
+10/06/2021 01:31:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 073600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0026 a-nll: 1.9165 s-kl: 0.0203 a-kl: 1.7034 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 01:39:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 073800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8498 a-nll: 1.7589 s-kl: 0.0286 a-kl: 1.6026 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 01:47:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 074000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5632 a-nll: 1.5447 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0807 aa-l: 0.3719
+10/06/2021 01:55:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 074200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9184 a-nll: 1.8755 s-kl: 0.0477 a-kl: 1.1839 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 02:02:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 074400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.2489 a-nll: 2.1631 s-kl: 0.1096 a-kl: 1.9001 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 02:10:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 074600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6103 a-nll: 1.5105 s-kl: 0.0580 a-kl: 1.4164 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 02:18:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 38 STEP 074800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7175 a-nll: 1.5021 s-kl: 0.0201 a-kl: 1.6100 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 02:22:56 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 39] FINISHED - INFERENCE TRAINING
+10/06/2021 02:22:56 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 40] START - INFERENCE TRAINING
+10/06/2021 02:26:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 075000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7175 a-nll: 1.7156 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1550 aa-l: 0.3993
+10/06/2021 02:26:11 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/06/2021 02:33:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 075200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7623 a-nll: 1.7732 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1641 aa-l: 0.4819
+10/06/2021 02:41:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 075400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8231 a-nll: 1.7545 s-kl: 0.0147 a-kl: 1.4737 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 02:49:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 075600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6726 a-nll: 1.6083 s-kl: 0.0226 a-kl: 1.3377 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 02:56:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 075800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6203 a-nll: 1.5824 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0542 aa-l: 0.5797
+10/06/2021 03:04:40 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 076000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5829 a-nll: 1.5857 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1964 aa-l: 0.5721
+10/06/2021 03:12:16 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 076200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9331 a-nll: 1.8342 s-kl: 0.0651 a-kl: 1.7191 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 03:19:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 076400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7425 a-nll: 1.7528 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2100 aa-l: 0.3705
+10/06/2021 03:27:37 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 076600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.3310 a-nll: 1.3267 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1398 aa-l: 0.3510
+10/06/2021 03:35:04 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 39 STEP 076800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5638 a-nll: 1.5615 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0630 aa-l: 0.3599
+10/06/2021 03:36:27 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 40] FINISHED - INFERENCE TRAINING
+10/06/2021 03:36:27 [vrbot_engine.py 32] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/vrbot/fb7574e5/40-76837-train.model.ckpt
+10/06/2021 03:36:28 [vrbot_engine.py 34] main.engine - INFO: DUMPING CKPT DONE
+10/06/2021 03:36:28 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 41] START - INFERENCE TRAINING
+10/06/2021 03:42:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 077000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6462 a-nll: 1.6302 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1239 aa-l: 0.4100
+10/06/2021 03:50:09 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 077200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7697 a-nll: 1.6233 s-kl: 0.0597 a-kl: 1.5451 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 03:58:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 077400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6583 a-nll: 1.6232 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0575 aa-l: 0.4021
+10/06/2021 04:05:46 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 077600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5523 a-nll: 1.5642 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1214 aa-l: 0.4192
+10/06/2021 04:13:25 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 077800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5392 a-nll: 1.5421 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1551 aa-l: 0.4169
+10/06/2021 04:21:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 078000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8755 a-nll: 1.8272 s-kl: 0.0254 a-kl: 1.4605 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 04:28:31 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 078200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5466 a-nll: 1.5170 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1978 aa-l: 0.5179
+10/06/2021 04:36:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 078400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7672 a-nll: 1.6607 s-kl: 0.0389 a-kl: 1.5865 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 04:43:34 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 40 STEP 078600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7494 a-nll: 1.6321 s-kl: 0.0266 a-kl: 1.4409 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 04:49:35 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 41] FINISHED - INFERENCE TRAINING
+10/06/2021 04:49:35 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 42] START - INFERENCE TRAINING
+10/06/2021 04:51:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 078800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7586 a-nll: 1.7140 s-kl: 0.0197 a-kl: 1.3477 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 04:58:33 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 079000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5964 a-nll: 1.5267 s-kl: 0.0393 a-kl: 1.2054 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 05:06:21 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 079200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.3963 a-nll: 1.3644 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0385 aa-l: 0.2711
+10/06/2021 05:14:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 079400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5070 a-nll: 1.4805 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0501 aa-l: 0.2416
+10/06/2021 05:21:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 079600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6320 a-nll: 1.6401 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2006 aa-l: 0.3077
+10/06/2021 05:28:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 079800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8473 a-nll: 1.8070 s-kl: 0.0202 a-kl: 1.1517 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 05:36:30 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 080000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0600 a-nll: 2.0014 s-kl: 0.0204 a-kl: 1.3920 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 05:36:31 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/06/2021 05:36:31 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/06/2021 05:40:50 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/06/2021 05:40:51 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/41-80000-valid-(0.1769-0.1039-0.0719-0.0554).txt
+10/06/2021 05:40:51 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/41-80000-valid-(0.1769-0.1039-0.0719-0.0554).txt with 1993 sessions
+10/06/2021 05:40:51 [writer4json.py 22] main.json_writer - INFO: dump done in 0.1785123348236084 seconds
+10/06/2021 05:40:51 [vrbot_engine.py 405] main.engine - INFO: MODEL REACH THE BEST RESULT IN EPOCH 41 STEP 80000
+10/06/2021 05:40:51 [vrbot_engine.py 425] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/VRBot/fb7574e5/41-80000-(0.1769-0.1039-0.0719-0.0554).model.ckpt
+10/06/2021 05:40:52 [vrbot_engine.py 427] main.engine - INFO: DUMPING CKPT DONE
+10/06/2021 05:40:52 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/06/2021 05:43:11 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/06/2021 05:43:12 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/41-80000-test-(0.1740-0.1002-0.0678-0.0514).txt
+10/06/2021 05:43:12 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/41-80000-test-(0.1740-0.1002-0.0678-0.0514).txt with 996 sessions
+10/06/2021 05:43:12 [writer4json.py 22] main.json_writer - INFO: dump done in 0.09479117393493652 seconds
+10/06/2021 05:51:00 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 080200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9236 a-nll: 1.8739 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1469 aa-l: 0.5578
+10/06/2021 05:58:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 080400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6028 a-nll: 1.5640 s-kl: 0.0257 a-kl: 0.9389 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 06:05:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 41 STEP 080600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7032 a-nll: 1.6085 s-kl: 0.0175 a-kl: 1.7289 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 06:08:36 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 42] FINISHED - INFERENCE TRAINING
+10/06/2021 06:08:36 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 43] START - INFERENCE TRAINING
+10/06/2021 06:12:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 080800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9586 a-nll: 1.9231 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2006 aa-l: 0.5510
+10/06/2021 06:20:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 081000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7278 a-nll: 1.6635 s-kl: 0.0183 a-kl: 1.1725 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 06:28:20 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 081200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4099 a-nll: 1.3803 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1776 aa-l: 0.3413
+10/06/2021 06:35:55 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 081400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4991 a-nll: 1.4857 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0983 aa-l: 0.3858
+10/06/2021 06:43:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 081600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7945 a-nll: 1.7647 s-kl: 0.0390 a-kl: 1.5598 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 06:50:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 081800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6464 a-nll: 1.5261 s-kl: 0.0211 a-kl: 1.9518 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 06:58:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 082000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7770 a-nll: 1.7549 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0437 aa-l: 0.4474
+10/06/2021 07:05:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 082200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6761 a-nll: 1.6764 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0960 aa-l: 0.4442
+10/06/2021 07:13:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 082400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7130 a-nll: 1.6851 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1379 aa-l: 0.5019
+10/06/2021 07:20:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 42 STEP 082600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.5012 a-nll: 2.5091 s-kl: 0.1940 a-kl: 0.2600 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 07:20:43 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 43] FINISHED - INFERENCE TRAINING
+10/06/2021 07:20:43 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 44] START - INFERENCE TRAINING
+10/06/2021 07:28:13 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 082800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.8095 a-nll: 1.7921 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0717 aa-l: 0.4212
+10/06/2021 07:35:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 083000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9087 a-nll: 1.8863 s-kl: 0.0294 a-kl: 1.6300 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 07:43:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 083200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8912 a-nll: 1.8632 s-kl: 0.0298 a-kl: 1.6933 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 07:51:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 083400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6542 a-nll: 1.6493 s-kl: 0.0165 a-kl: 1.5454 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 07:58:40 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 083600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6899 a-nll: 1.6654 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0777 aa-l: 0.4183
+10/06/2021 08:06:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 083800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4170 a-nll: 1.4146 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0434 aa-l: 0.3262
+10/06/2021 08:13:58 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 084000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.9067 a-nll: 1.8909 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0854 aa-l: 0.2323
+10/06/2021 08:21:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 084200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.3630 a-nll: 1.2872 s-kl: 0.0263 a-kl: 1.2909 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 08:29:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 43 STEP 084400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6074 a-nll: 1.5264 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0982 aa-l: 0.4828
+10/06/2021 08:33:56 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 44] FINISHED - INFERENCE TRAINING
+10/06/2021 08:33:56 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 45] START - INFERENCE TRAINING
+10/06/2021 08:36:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 084600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7637 a-nll: 1.7354 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0963 aa-l: 0.6280
+10/06/2021 08:44:45 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 084800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.3950 a-nll: 1.3470 s-kl: 0.0757 a-kl: 1.2956 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 08:52:30 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 085000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4998 a-nll: 1.4801 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0683 aa-l: 0.3899
+10/06/2021 08:52:31 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/06/2021 09:00:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 085200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6405 a-nll: 1.6508 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2849 aa-l: 0.3576
+10/06/2021 09:07:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 085400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5814 a-nll: 1.5442 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2726 aa-l: 0.2787
+10/06/2021 09:15:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 085600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7483 a-nll: 1.7202 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0911 aa-l: 0.4945
+10/06/2021 09:23:13 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 085800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6701 a-nll: 1.6437 s-kl: 0.0171 a-kl: 1.5424 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 09:31:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 086000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7122 a-nll: 1.7034 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0841 aa-l: 0.4850
+10/06/2021 09:38:35 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 086200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6815 a-nll: 1.6247 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0868 aa-l: 0.4071
+10/06/2021 09:46:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 44 STEP 086400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7890 a-nll: 1.6918 s-kl: 0.0295 a-kl: 1.3440 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 09:47:33 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 45] FINISHED - INFERENCE TRAINING
+10/06/2021 09:47:33 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 46] START - INFERENCE TRAINING
+10/06/2021 09:53:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 086600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7655 a-nll: 1.7523 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0706 aa-l: 0.3268
+10/06/2021 10:00:28 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 086800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.4567 a-nll: 1.4061 s-kl: 0.0333 a-kl: 1.1733 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 10:08:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 087000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9607 a-nll: 1.9156 s-kl: 0.0201 a-kl: 1.4376 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 10:15:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 087200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5558 a-nll: 1.5193 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0902 aa-l: 0.4717
+10/06/2021 10:23:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 087400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.4694 a-nll: 1.4395 s-kl: 0.0453 a-kl: 0.7548 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 10:31:13 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 087600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6478 a-nll: 1.6175 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0612 aa-l: 0.3465
+10/06/2021 10:38:49 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 087800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6766 a-nll: 1.6355 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1221 aa-l: 0.3104
+10/06/2021 10:46:06 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 088000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4526 a-nll: 1.4562 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0687 aa-l: 0.4199
+10/06/2021 10:53:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 45 STEP 088200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7051 a-nll: 1.7085 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0667 aa-l: 0.4397
+10/06/2021 10:59:50 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 46] FINISHED - INFERENCE TRAINING
+10/06/2021 10:59:50 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 47] START - INFERENCE TRAINING
+10/06/2021 11:00:52 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 088400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4244 a-nll: 1.4188 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1019 aa-l: 0.3579
+10/06/2021 11:08:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 088600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7389 a-nll: 1.6926 s-kl: 0.0400 a-kl: 1.7812 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 11:16:14 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 088800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5262 a-nll: 1.5190 s-kl: 0.0370 a-kl: 1.1172 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 11:23:48 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 089000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.9008 a-nll: 1.8402 s-kl: 0.0342 a-kl: 1.0887 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 11:31:15 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 089200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6909 a-nll: 1.6892 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0991 aa-l: 0.2507
+10/06/2021 11:38:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 089400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 2.0216 a-nll: 2.0010 s-kl: 0.0402 a-kl: 1.0913 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 11:46:16 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 089600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6671 a-nll: 1.5571 s-kl: 0.0153 a-kl: 1.7877 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 11:54:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 089800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8237 a-nll: 1.7686 s-kl: 0.0359 a-kl: 1.0059 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 12:01:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 090000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5367 a-nll: 1.4344 s-kl: 0.0409 a-kl: 1.2016 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 12:01:40 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/06/2021 12:01:40 [vrbot_engine.py 275] main.engine - INFO: VALID INFERENCE START ...
+10/06/2021 12:06:01 [vrbot_engine.py 320] main.engine - INFO: VALID INFERENCE FINISHED
+10/06/2021 12:06:02 [vrbot_engine.py 396] main.engine - INFO: WRITE valid OUTPUT TO FILE data/cache/VRBot/fb7574e5/46-90000-valid-(0.1749-0.1010-0.0688-0.0525).txt
+10/06/2021 12:06:02 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/46-90000-valid-(0.1749-0.1010-0.0688-0.0525).txt with 1993 sessions
+10/06/2021 12:06:02 [writer4json.py 22] main.json_writer - INFO: dump done in 0.18469500541687012 seconds
+10/06/2021 12:06:02 [vrbot_engine.py 415] main.engine - INFO: METRICS NOT IMPROVED IN EPOCH 46 STEP 90000
+10/06/2021 12:06:02 [vrbot_engine.py 275] main.engine - INFO: TEST INFERENCE START ...
+10/06/2021 12:08:17 [vrbot_engine.py 320] main.engine - INFO: TEST INFERENCE FINISHED
+10/06/2021 12:08:18 [vrbot_engine.py 396] main.engine - INFO: WRITE test OUTPUT TO FILE data/cache/VRBot/fb7574e5/46-90000-test-(0.1724-0.0988-0.0661-0.0495).txt
+10/06/2021 12:08:18 [writer4json.py 18] main.json_writer - INFO: dumping to data/cache/VRBot/fb7574e5/46-90000-test-(0.1724-0.0988-0.0661-0.0495).txt with 996 sessions
+10/06/2021 12:08:18 [writer4json.py 22] main.json_writer - INFO: dump done in 0.10292363166809082 seconds
+10/06/2021 12:15:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 46 STEP 090200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5190 a-nll: 1.5153 s-kl: 0.0276 a-kl: 1.3227 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 12:19:14 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 47] FINISHED - INFERENCE TRAINING
+10/06/2021 12:19:14 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 48] START - INFERENCE TRAINING
+10/06/2021 12:23:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 090400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5085 a-nll: 1.5331 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1632 aa-l: 0.3845
+10/06/2021 12:30:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 090600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7732 a-nll: 1.6879 s-kl: 0.0418 a-kl: 1.3130 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 12:38:11 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 090800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.8342 a-nll: 1.7711 s-kl: 0.0306 a-kl: 1.4107 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 12:45:59 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 091000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6481 a-nll: 1.6336 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0835 aa-l: 0.4702
+10/06/2021 12:53:51 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 091200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4344 a-nll: 1.4229 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0892 aa-l: 0.3785
+10/06/2021 13:01:39 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 091400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5439 a-nll: 1.5331 s-kl: 0.0245 a-kl: 1.2571 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 13:09:01 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 091600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.3339 a-nll: 1.2786 s-kl: 0.0195 a-kl: 1.0022 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 13:16:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 091800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5981 a-nll: 1.5306 s-kl: 0.0200 a-kl: 1.1098 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 13:24:10 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 092000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5920 a-nll: 1.5803 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1110 aa-l: 0.3205
+10/06/2021 13:31:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 47 STEP 092200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6770 a-nll: 1.5892 s-kl: 0.0394 a-kl: 1.1652 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 13:32:12 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 48] FINISHED - INFERENCE TRAINING
+10/06/2021 13:32:12 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 49] START - INFERENCE TRAINING
+10/06/2021 13:39:02 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 092400 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7454 a-nll: 1.7163 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.0695 aa-l: 0.3567
+10/06/2021 13:46:27 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 092600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5708 a-nll: 1.5354 s-kl: 0.0319 a-kl: 1.3913 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 13:54:07 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 092800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6053 a-nll: 1.5602 s-kl: 0.0641 a-kl: 1.0237 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 14:01:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 093000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7115 a-nll: 1.6732 s-kl: 0.0127 a-kl: 1.1543 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 14:09:03 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 093200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4655 a-nll: 1.4343 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.2154 aa-l: 0.2470
+10/06/2021 14:16:43 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 093400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5522 a-nll: 1.5199 s-kl: 0.0120 a-kl: 1.1880 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 14:24:13 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 093600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.7545 a-nll: 1.7527 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1800 aa-l: 0.3661
+10/06/2021 14:31:42 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 093800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6139 a-nll: 1.5502 s-kl: 0.0276 a-kl: 0.9829 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 14:39:26 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 48 STEP 094000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5145 a-nll: 1.5098 s-kl: 0.0357 a-kl: 1.4253 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 14:44:24 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 49] FINISHED - INFERENCE TRAINING
+10/06/2021 14:44:24 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 50] START - INFERENCE TRAINING
+10/06/2021 14:46:41 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 094200 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6822 a-nll: 1.6133 s-kl: 0.0276 a-kl: 1.4987 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 14:54:09 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 094400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.4809 a-nll: 1.4341 s-kl: 0.0242 a-kl: 1.0044 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 15:01:36 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 094600 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.6026 a-nll: 1.5636 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1907 aa-l: 0.4997
+10/06/2021 15:09:05 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 094800 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.3422 a-nll: 1.2856 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1323 aa-l: 0.3176
+10/06/2021 15:16:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 095000 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.6764 a-nll: 1.5894 s-kl: 0.0283 a-kl: 1.1451 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 15:16:46 [vrbot_engine.py 240] main.engine - INFO: learning rate decay
+10/06/2021 15:24:18 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 095200 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.5905 a-nll: 1.5937 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1942 aa-l: 0.3026
+10/06/2021 15:31:53 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 095400 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.5616 a-nll: 1.5428 s-kl: 0.0172 a-kl: 0.9839 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 15:39:24 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 095600 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.7116 a-nll: 1.6734 s-kl: 0.0286 a-kl: 0.7049 i-l: -0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 15:46:54 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 095800 TRAIN-STAGE [ACTION]] - UNSUPER s-nll: 1.2861 a-nll: 1.2447 s-kl: 0.0801 a-kl: 1.0582 i-l: 0.0000 sa-l: 0.0000 aa-l: 0.0000
+10/06/2021 15:54:44 [vrbot_engine.py 230] main.engine - INFO: [TASK-UUID fb7574e5 EPOCH 49 STEP 096000 TRAIN-STAGE [ACTION]] - SUPER s-nll: 1.4406 a-nll: 1.4676 s-kl: 0.0000 a-kl: 0.0000 i-l: 0.0000 sa-l: 0.1161 aa-l: 0.1541
+10/06/2021 15:56:41 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 50] FINISHED - INFERENCE TRAINING
+10/06/2021 15:56:41 [vrbot_engine.py 32] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/vrbot/fb7574e5/50-96059-train.model.ckpt
+10/06/2021 15:56:42 [vrbot_engine.py 34] main.engine - INFO: DUMPING CKPT DONE

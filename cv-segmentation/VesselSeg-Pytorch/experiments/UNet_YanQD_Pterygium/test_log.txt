@@ -1,0 +1,52 @@
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Pterygium/val.txt [0m
+ori data shape < ori_imgs:(51, 3, 512, 512) GTs:(51, 1, 512, 512) FOVs:(51, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (51, 1, 512, 512)
+
+Test images shape: (51, 1, 512, 512), vaule range (0.0 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 37179
+test patches shape: (37179, 1, 96, 96), value range (0.0 - 1.0)
+There are 51 images in Testset
+OrderedDict([('AUC_ROC', 0.928254), ('AUC_PR', 0.637492), ('f1-score', 0.447305), ('Acc', 0.91221), ('SE', 0.31546), ('SP', 0.98794), ('precision', 0.768496)])
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Pterygium/test.txt [0m
+ori data shape < ori_imgs:(26, 3, 512, 512) GTs:(26, 1, 512, 512) FOVs:(26, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (26, 1, 512, 512)
+
+Test images shape: (26, 1, 512, 512), vaule range (0.0 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 18954
+test patches shape: (18954, 1, 96, 96), value range (0.0 - 1.0)
+There are 26 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('AUC_ROC', 0.95515), ('AUC_PR', 0.836177), ('f1-score', 0.734145), ('Acc', 0.931686), ('SE', 0.650596), ('SP', 0.979348), ('precision', 0.842313)])
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Pterygium/test.txt [0m
+ori data shape < ori_imgs:(26, 3, 512, 512) GTs:(26, 1, 512, 512) FOVs:(26, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (26, 1, 512, 512)
+
+Test images shape: (26, 1, 512, 512), vaule range (0.0 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 18954
+test patches shape: (18954, 1, 96, 96), value range (0.0 - 1.0)
+There are 26 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('AUC_ROC', 0.95515), ('AUC_PR', 0.836177), ('f1-score', 0.734145), ('Acc', 0.931686), ('SE', 0.650596), ('SP', 0.979348), ('precision', 0.842313)])

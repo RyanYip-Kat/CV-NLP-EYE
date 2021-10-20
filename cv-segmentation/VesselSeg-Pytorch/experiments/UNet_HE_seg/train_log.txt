@@ -1,0 +1,49 @@
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+The computing device used is:  GPU
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/HE/train.txt [0m
+[0;31m Single channel binary image is multiplied by 255 [0m
+ori data shape < ori_imgs:(147, 3, 512, 512) GTs:(147, 1, 512, 512) FOVs:(147, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+
+EPOCH: 21/50 --(learn_rate:0.000500) | Time: Sun Sep 26 04:01:12 2021
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/HE/train.txt [0m
+[0;31m Single channel binary image is multiplied by 255 [0m
+ori data shape < ori_imgs:(147, 3, 512, 512) GTs:(147, 1, 512, 512) FOVs:(147, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+
+EPOCH: 21/50 --(learn_rate:0.000500) | Time: Sun Sep 26 04:03:05 2021
+[False]
+[0. 1.]
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/HE/train.txt [0m
+[0;31m Single channel binary image is multiplied by 255 [0m
+ori data shape < ori_imgs:(147, 3, 512, 512) GTs:(147, 1, 512, 512) FOVs:(147, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+
+EPOCH: 21/50 --(learn_rate:0.000500) | Time: Sun Sep 26 04:20:02 2021

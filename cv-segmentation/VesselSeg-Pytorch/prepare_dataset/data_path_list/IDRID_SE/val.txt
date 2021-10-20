@@ -1,0 +1,14 @@
+/path/vesselSeg-Idrid/images/val/IDRiD_61.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_61_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_61_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_60.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_60_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_60_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_75.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_75_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_75_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_71.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_71_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_71_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_56.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_56_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_56_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_67.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_67_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_67_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_59.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_59_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_59_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_68.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_68_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_68_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_70.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_70_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_70_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_64.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_64_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_64_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_72.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_72_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_72_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_73.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_73_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_73_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_74.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_74_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_74_mask.png
+/path/vesselSeg-Idrid/images/val/IDRiD_55.jpg /path/vesselSeg-Idrid/annotations/val/SoftExudates/IDRiD_55_SE.png /path/vesselSeg-Idrid/masks/val/IDRiD_55_mask.png

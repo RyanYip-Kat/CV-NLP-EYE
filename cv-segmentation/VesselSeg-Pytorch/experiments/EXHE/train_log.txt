@@ -1,0 +1,36 @@
+The computing device used is:  GPU
+Total number of parameters: 879427
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EXHE/train.txt [0m
+The computing device used is:  GPU
+Total number of parameters: 879427
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EXHE/train.txt [0m
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_HE/train.txt [0m
+ori data shape < ori_imgs:(53, 3, 1024, 1024) GTs:(53, 1, 1024, 1024) FOVs:(53, 1, 1024, 1024)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_HE/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 1024, 1024) GTs:(27, 1, 1024, 1024) FOVs:(27, 1, 1024, 1024)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 1024, 1024)
+
+Test images shape: (27, 1, 1024, 1024), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 59
+Number of patches on w : 59
+number of patches per image: 3481, totally for testset: 93987
+test patches shape: (93987, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 21/50 --(learn_rate:0.000500) | Time: Mon Sep 27 10:39:00 2021
+There are 27 images in Testset

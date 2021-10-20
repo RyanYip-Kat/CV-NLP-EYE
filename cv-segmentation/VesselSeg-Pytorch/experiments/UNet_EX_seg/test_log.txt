@@ -1,0 +1,16 @@
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_EX/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+There are 27 images in Testset
+OrderedDict([('AUC_ROC', 0.992376), ('AUC_PR', 0.846034), ('f1-score', 0.752448), ('Acc', 0.99323), ('SE', 0.661978), ('SP', 0.99846), ('precision', 0.871561)])

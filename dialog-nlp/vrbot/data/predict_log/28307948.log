@@ -1,0 +1,11 @@
+10/19/2021 08:19:56 [<stdin> 1] main - INFO: TASK ID 28307948
+10/19/2021 08:21:14 [predict.py 11] main - INFO: TASK ID 28307948
+10/19/2021 08:21:14 [predict.py 11] main - INFO: TASK ID 28307948
+10/19/2021 08:21:34 [load_data.py 16] main - INFO: 
+read session from data/dxy_test.zip
+10/19/2021 08:21:34 [load_data.py 16] main - INFO: 
+read session from data/dxy_test.zip
+10/19/2021 08:24:37 [load_data.py 16] main - INFO: 
+read session from data/dxy_test.zip
+10/19/2021 08:24:37 [load_data.py 16] main - INFO: 
+read session from data/dxy_test.zip

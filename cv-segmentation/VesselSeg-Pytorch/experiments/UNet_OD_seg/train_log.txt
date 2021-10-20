@@ -1,0 +1,192 @@
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 1/50 --(learn_rate:0.000500) | Time: Wed Sep  8 01:54:17 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 1), ('train_loss', 0.051994), ('val_auc_roc', 0.996347), ('val_f1', 0.801935), ('val_acc', 0.989589), ('SE', 0.85051), ('SP', 0.993123)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 1 | AUC_roc: 0.996347
+
+EPOCH: 2/50 --(learn_rate:0.000500) | Time: Wed Sep  8 02:04:10 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 2), ('train_loss', 0.032771), ('val_auc_roc', 0.998393), ('val_f1', 0.87603), ('val_acc', 0.993384), ('SE', 0.943304), ('SP', 0.994656)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 2 | AUC_roc: 0.998393
+
+EPOCH: 3/50 --(learn_rate:0.000498) | Time: Wed Sep  8 02:08:56 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 3), ('train_loss', 0.026917), ('val_auc_roc', 0.998972), ('val_f1', 0.891229), ('val_acc', 0.994491), ('SE', 0.910675), ('SP', 0.996621)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 3 | AUC_roc: 0.998972
+
+EPOCH: 4/50 --(learn_rate:0.000496) | Time: Wed Sep  8 02:15:43 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 4), ('train_loss', 0.02345), ('val_auc_roc', 0.998818), ('val_f1', 0.870082), ('val_acc', 0.992797), ('SE', 0.97328), ('SP', 0.993293)])
+Best performance at Epoch: 3 | AUC_roc: 0.998972
+
+EPOCH: 5/50 --(learn_rate:0.000492) | Time: Wed Sep  8 02:20:53 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 5), ('train_loss', 0.02123), ('val_auc_roc', 0.999501), ('val_f1', 0.911767), ('val_acc', 0.995287), ('SE', 0.982723), ('SP', 0.995606)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 5 | AUC_roc: 0.999501
+
+EPOCH: 6/50 --(learn_rate:0.000488) | Time: Wed Sep  8 02:31:33 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 6), ('train_loss', 0.018828), ('val_auc_roc', 0.999416), ('val_f1', 0.910911), ('val_acc', 0.995264), ('SE', 0.977075), ('SP', 0.995726)])
+Best performance at Epoch: 5 | AUC_roc: 0.999501
+
+EPOCH: 7/50 --(learn_rate:0.000482) | Time: Wed Sep  8 02:38:55 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 7), ('train_loss', 0.016823), ('val_auc_roc', 0.999691), ('val_f1', 0.936757), ('val_acc', 0.996793), ('SE', 0.958435), ('SP', 0.997768)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 7 | AUC_roc: 0.999691
+
+EPOCH: 8/50 --(learn_rate:0.000476) | Time: Wed Sep  8 02:55:42 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 8), ('train_loss', 0.015516), ('val_auc_roc', 0.999745), ('val_f1', 0.943573), ('val_acc', 0.997217), ('SE', 0.938872), ('SP', 0.9987)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 8 | AUC_roc: 0.999745
+
+EPOCH: 9/50 --(learn_rate:0.000469) | Time: Wed Sep  8 03:03:57 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 9), ('train_loss', 0.014767), ('val_auc_roc', 0.999603), ('val_f1', 0.919406), ('val_acc', 0.995759), ('SE', 0.976177), ('SP', 0.996256)])
+Best performance at Epoch: 8 | AUC_roc: 0.999745
+
+EPOCH: 10/50 --(learn_rate:0.000461) | Time: Wed Sep  8 03:17:06 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 10), ('train_loss', 0.013892), ('val_auc_roc', 0.999732), ('val_f1', 0.946259), ('val_acc', 0.997313), ('SE', 0.954615), ('SP', 0.998398)])
+Best performance at Epoch: 8 | AUC_roc: 0.999745
+
+EPOCH: 11/50 --(learn_rate:0.000452) | Time: Wed Sep  8 03:24:01 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 11), ('train_loss', 0.013019), ('val_auc_roc', 0.999788), ('val_f1', 0.950417), ('val_acc', 0.997502), ('SE', 0.966147), ('SP', 0.998299)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 11 | AUC_roc: 0.999788
+
+EPOCH: 12/50 --(learn_rate:0.000443) | Time: Wed Sep  8 03:37:16 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 12), ('train_loss', 0.012548), ('val_auc_roc', 0.999746), ('val_f1', 0.944892), ('val_acc', 0.997231), ('SE', 0.957782), ('SP', 0.998234)])
+Best performance at Epoch: 11 | AUC_roc: 0.999788
+
+EPOCH: 13/50 --(learn_rate:0.000432) | Time: Wed Sep  8 03:42:08 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 13), ('train_loss', 0.012266), ('val_auc_roc', 0.999839), ('val_f1', 0.958105), ('val_acc', 0.99791), ('SE', 0.964368), ('SP', 0.998762)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 13 | AUC_roc: 0.999839
+
+EPOCH: 14/50 --(learn_rate:0.000421) | Time: Wed Sep  8 03:47:41 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 14), ('train_loss', 0.01156), ('val_auc_roc', 0.99984), ('val_f1', 0.956129), ('val_acc', 0.997772), ('SE', 0.979687), ('SP', 0.998232)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 14 | AUC_roc: 0.99984
+
+EPOCH: 15/50 --(learn_rate:0.000409) | Time: Wed Sep  8 03:59:47 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 15), ('train_loss', 0.01107), ('val_auc_roc', 0.999819), ('val_f1', 0.954027), ('val_acc', 0.997695), ('SE', 0.965013), ('SP', 0.998526)])
+Best performance at Epoch: 14 | AUC_roc: 0.99984
+
+EPOCH: 16/50 --(learn_rate:0.000397) | Time: Wed Sep  8 04:03:28 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 16), ('train_loss', 0.01073), ('val_auc_roc', 0.999796), ('val_f1', 0.952981), ('val_acc', 0.997622), ('SE', 0.972374), ('SP', 0.998264)])
+Best performance at Epoch: 14 | AUC_roc: 0.99984
+
+EPOCH: 17/50 --(learn_rate:0.000384) | Time: Wed Sep  8 04:09:49 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 17), ('train_loss', 0.010421), ('val_auc_roc', 0.99966), ('val_f1', 0.925123), ('val_acc', 0.996126), ('SE', 0.965747), ('SP', 0.996898)])
+Best performance at Epoch: 14 | AUC_roc: 0.99984
+
+EPOCH: 18/50 --(learn_rate:0.000370) | Time: Wed Sep  8 04:14:05 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 18), ('train_loss', 0.010155), ('val_auc_roc', 0.99989), ('val_f1', 0.962895), ('val_acc', 0.998155), ('SE', 0.965968), ('SP', 0.998973)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 18 | AUC_roc: 0.99989
+
+EPOCH: 19/50 --(learn_rate:0.000356) | Time: Wed Sep  8 04:20:41 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 19), ('train_loss', 0.00968), ('val_auc_roc', 0.99979), ('val_f1', 0.951206), ('val_acc', 0.997574), ('SE', 0.954272), ('SP', 0.998674)])
+Best performance at Epoch: 18 | AUC_roc: 0.99989
+
+EPOCH: 20/50 --(learn_rate:0.000342) | Time: Wed Sep  8 04:24:25 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 20), ('train_loss', 0.009344), ('val_auc_roc', 0.999805), ('val_f1', 0.951873), ('val_acc', 0.997576), ('SE', 0.967216), ('SP', 0.998348)])
+Best performance at Epoch: 18 | AUC_roc: 0.99989
+
+EPOCH: 21/50 --(learn_rate:0.000327) | Time: Wed Sep  8 04:30:47 2021
+There are 27 images in Testset
+OrderedDict([('epoch', 21), ('train_loss', 0.008965), ('val_auc_roc', 0.999841), ('val_f1', 0.955929), ('val_acc', 0.99782), ('SE', 0.954077), ('SP', 0.998932)])
+Best performance at Epoch: 18 | AUC_roc: 0.99989
+
+EPOCH: 22/50 --(learn_rate:0.000312) | Time: Wed Sep  8 04:36:48 2021
+There are 27 images in Testset
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/train.txt [0m
+ori data shape < ori_imgs:(54, 3, 512, 512) GTs:(54, 1, 512, 512) FOVs:(54, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+
+EPOCH: 22/50 --(learn_rate:0.000500) | Time: Wed Sep  8 04:58:25 2021

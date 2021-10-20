@@ -1,0 +1,1 @@
+python gpt2_comet_chinese.py --data youlai_demo_data/ --train_batch_size 16 --valid_batch_size 8 --train_epochs 10 --valid_epochs 5 --outdir ./youlai_test --do_train --device 0 --model /path/huggingface-models/gpt2-chinese-cluecorpussmall/  # pass

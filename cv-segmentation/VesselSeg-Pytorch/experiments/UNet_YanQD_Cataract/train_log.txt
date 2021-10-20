@@ -1,0 +1,344 @@
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Cataract/train.txt [0m
+ori data shape < ori_imgs:(1160, 3, 512, 512) GTs:(1160, 1, 512, 512) FOVs:(1160, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Cataract/test.txt [0m
+ori data shape < ori_imgs:(389, 3, 512, 512) GTs:(389, 1, 512, 512) FOVs:(389, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (389, 1, 512, 512)
+
+Test images shape: (389, 1, 512, 512), vaule range (0.0 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 283581
+test patches shape: (283581, 1, 96, 96), value range (0.0 - 1.0)
+
+EPOCH: 1/50 --(learn_rate:0.000500) | Time: Thu Sep  9 09:24:13 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 1), ('train_loss', 0.294148), ('val_auc_roc', 0.921855), ('val_f1', 0.660779), ('val_acc', 0.925981), ('SE', 0.699767), ('SP', 0.951963)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 1 | AUC_roc: 0.921855
+
+EPOCH: 2/50 --(learn_rate:0.000500) | Time: Thu Sep  9 09:43:38 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 2), ('train_loss', 0.21957), ('val_auc_roc', 0.953548), ('val_f1', 0.757512), ('val_acc', 0.953765), ('SE', 0.700984), ('SP', 0.982798)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 2 | AUC_roc: 0.953548
+
+EPOCH: 3/50 --(learn_rate:0.000498) | Time: Thu Sep  9 10:01:26 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 3), ('train_loss', 0.192065), ('val_auc_roc', 0.967955), ('val_f1', 0.790802), ('val_acc', 0.957523), ('SE', 0.779296), ('SP', 0.977993)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 3 | AUC_roc: 0.967955
+
+EPOCH: 4/50 --(learn_rate:0.000496) | Time: Thu Sep  9 10:19:39 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 4), ('train_loss', 0.175612), ('val_auc_roc', 0.975229), ('val_f1', 0.816233), ('val_acc', 0.96357), ('SE', 0.785326), ('SP', 0.984042)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 4 | AUC_roc: 0.975229
+
+EPOCH: 5/50 --(learn_rate:0.000492) | Time: Thu Sep  9 10:36:31 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 5), ('train_loss', 0.165229), ('val_auc_roc', 0.978348), ('val_f1', 0.794797), ('val_acc', 0.9613), ('SE', 0.727488), ('SP', 0.988154)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 5 | AUC_roc: 0.978348
+
+EPOCH: 6/50 --(learn_rate:0.000488) | Time: Thu Sep  9 10:55:06 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 6), ('train_loss', 0.156506), ('val_auc_roc', 0.984092), ('val_f1', 0.828442), ('val_acc', 0.966803), ('SE', 0.778018), ('SP', 0.988486)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 6 | AUC_roc: 0.984092
+
+EPOCH: 7/50 --(learn_rate:0.000482) | Time: Thu Sep  9 11:13:05 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 7), ('train_loss', 0.150097), ('val_auc_roc', 0.980902), ('val_f1', 0.83059), ('val_acc', 0.965717), ('SE', 0.815773), ('SP', 0.982938)])
+Best performance at Epoch: 6 | AUC_roc: 0.984092
+
+EPOCH: 8/50 --(learn_rate:0.000476) | Time: Thu Sep  9 11:31:28 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 8), ('train_loss', 0.144416), ('val_auc_roc', 0.985557), ('val_f1', 0.85256), ('val_acc', 0.96947), ('SE', 0.856785), ('SP', 0.982413)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 8 | AUC_roc: 0.985557
+
+EPOCH: 9/50 --(learn_rate:0.000469) | Time: Thu Sep  9 11:48:14 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 9), ('train_loss', 0.14098), ('val_auc_roc', 0.986944), ('val_f1', 0.856365), ('val_acc', 0.970126), ('SE', 0.864421), ('SP', 0.982267)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 9 | AUC_roc: 0.986944
+
+EPOCH: 10/50 --(learn_rate:0.000461) | Time: Thu Sep  9 12:05:01 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 10), ('train_loss', 0.136753), ('val_auc_roc', 0.984576), ('val_f1', 0.7763), ('val_acc', 0.959689), ('SE', 0.678938), ('SP', 0.991934)])
+Best performance at Epoch: 9 | AUC_roc: 0.986944
+
+EPOCH: 11/50 --(learn_rate:0.000452) | Time: Thu Sep  9 12:22:52 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 11), ('train_loss', 0.135693), ('val_auc_roc', 0.986922), ('val_f1', 0.856941), ('val_acc', 0.970666), ('SE', 0.852787), ('SP', 0.984205)])
+Best performance at Epoch: 9 | AUC_roc: 0.986944
+
+EPOCH: 12/50 --(learn_rate:0.000443) | Time: Thu Sep  9 12:39:44 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 12), ('train_loss', 0.132945), ('val_auc_roc', 0.987001), ('val_f1', 0.839382), ('val_acc', 0.968419), ('SE', 0.80099), ('SP', 0.987649)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+
+EPOCH: 13/50 --(learn_rate:0.000432) | Time: Thu Sep  9 12:57:43 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 13), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.1868), ('val_acc', 0.103022), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+
+EPOCH: 14/50 --(learn_rate:0.000421) | Time: Thu Sep  9 13:14:02 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 14), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.1868), ('val_acc', 0.103022), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+
+EPOCH: 15/50 --(learn_rate:0.000409) | Time: Thu Sep  9 13:31:34 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 15), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.1868), ('val_acc', 0.103022), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+
+EPOCH: 16/50 --(learn_rate:0.000397) | Time: Thu Sep  9 13:47:48 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 16), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.1868), ('val_acc', 0.103022), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+
+EPOCH: 17/50 --(learn_rate:0.000384) | Time: Thu Sep  9 14:04:07 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 17), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.1868), ('val_acc', 0.103022), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+
+EPOCH: 18/50 --(learn_rate:0.000370) | Time: Thu Sep  9 14:21:42 2021
+There are 389 images in Testset
+OrderedDict([('epoch', 18), ('train_loss', nan), ('val_auc_roc', 0.5), ('val_f1', 0.1868), ('val_acc', 0.103022), ('SE', 1.0), ('SP', 0.0)])
+Best performance at Epoch: 12 | AUC_roc: 0.987001
+=> early stopping
+The computing device used is:  GPU
+Total number of parameters: 879410
+Architecture of Model have saved in Tensorboard!
+==> Resuming from checkpoint..
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Cataract/train.txt [0m
+ori data shape < ori_imgs:(1160, 3, 512, 512) GTs:(1160, 1, 512, 512) FOVs:(1160, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+[0;32m===============Validation on Testset!!!===============[0m
+[0;33mload data from ./prepare_dataset/data_path_list/YanQD_Cataract/val.txt [0m
+ori data shape < ori_imgs:(336, 3, 512, 512) GTs:(336, 1, 512, 512) FOVs:(336, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (336, 1, 512, 512)
+
+Test images shape: (336, 1, 512, 512), vaule range (0.0 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 244944
+test patches shape: (244944, 1, 96, 96), value range (0.0 - 1.0)
+
+EPOCH: 22/50 --(learn_rate:0.000500) | Time: Fri Sep 10 13:37:04 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 22), ('train_loss', 0.22443), ('val_auc_roc', 0.949102), ('val_f1', 0.736633), ('val_acc', 0.95651), ('SE', 0.647899), ('SP', 0.988482)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 22 | AUC_roc: 0.949102
+
+EPOCH: 23/50 --(learn_rate:0.000500) | Time: Fri Sep 10 14:00:54 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 23), ('train_loss', 0.170937), ('val_auc_roc', 0.971515), ('val_f1', 0.811887), ('val_acc', 0.967536), ('SE', 0.746298), ('SP', 0.990456)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 23 | AUC_roc: 0.971515
+
+EPOCH: 24/50 --(learn_rate:0.000498) | Time: Fri Sep 10 14:25:00 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 24), ('train_loss', 0.157698), ('val_auc_roc', 0.975984), ('val_f1', 0.817782), ('val_acc', 0.969062), ('SE', 0.739564), ('SP', 0.992837)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 24 | AUC_roc: 0.975984
+
+EPOCH: 25/50 --(learn_rate:0.000496) | Time: Fri Sep 10 14:48:11 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 25), ('train_loss', 0.148625), ('val_auc_roc', 0.978052), ('val_f1', 0.834445), ('val_acc', 0.970101), ('SE', 0.802679), ('SP', 0.987446)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 25 | AUC_roc: 0.978052
+
+EPOCH: 26/50 --(learn_rate:0.000492) | Time: Fri Sep 10 15:10:15 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 26), ('train_loss', 0.143383), ('val_auc_roc', 0.97756), ('val_f1', 0.782948), ('val_acc', 0.965379), ('SE', 0.665171), ('SP', 0.99648)])
+Best performance at Epoch: 25 | AUC_roc: 0.978052
+
+EPOCH: 27/50 --(learn_rate:0.000488) | Time: Fri Sep 10 15:32:40 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 27), ('train_loss', 0.138223), ('val_auc_roc', 0.981358), ('val_f1', 0.807714), ('val_acc', 0.968591), ('SE', 0.702735), ('SP', 0.996133)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 27 | AUC_roc: 0.981358
+
+EPOCH: 28/50 --(learn_rate:0.000482) | Time: Fri Sep 10 15:55:02 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 28), ('train_loss', 0.136085), ('val_auc_roc', 0.979846), ('val_f1', 0.839287), ('val_acc', 0.972235), ('SE', 0.772309), ('SP', 0.992947)])
+Best performance at Epoch: 27 | AUC_roc: 0.981358
+
+EPOCH: 29/50 --(learn_rate:0.000476) | Time: Fri Sep 10 16:17:43 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 29), ('train_loss', 0.133302), ('val_auc_roc', 0.98368), ('val_f1', 0.850313), ('val_acc', 0.973062), ('SE', 0.815077), ('SP', 0.989428)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 29 | AUC_roc: 0.98368
+
+EPOCH: 30/50 --(learn_rate:0.000469) | Time: Fri Sep 10 16:39:39 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 30), ('train_loss', 0.131112), ('val_auc_roc', 0.983005), ('val_f1', 0.856858), ('val_acc', 0.974782), ('SE', 0.804045), ('SP', 0.99247)])
+Best performance at Epoch: 29 | AUC_roc: 0.98368
+
+EPOCH: 31/50 --(learn_rate:0.000461) | Time: Fri Sep 10 17:02:28 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 31), ('train_loss', 0.128059), ('val_auc_roc', 0.980004), ('val_f1', 0.718512), ('val_acc', 0.957836), ('SE', 0.573248), ('SP', 0.997679)])
+Best performance at Epoch: 29 | AUC_roc: 0.98368
+
+EPOCH: 32/50 --(learn_rate:0.000452) | Time: Fri Sep 10 17:26:12 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 32), ('train_loss', 0.126034), ('val_auc_roc', 0.984089), ('val_f1', 0.846283), ('val_acc', 0.973676), ('SE', 0.771934), ('SP', 0.994576)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 32 | AUC_roc: 0.984089
+
+EPOCH: 33/50 --(learn_rate:0.000443) | Time: Fri Sep 10 17:48:37 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 33), ('train_loss', 0.124724), ('val_auc_roc', 0.983716), ('val_f1', 0.838905), ('val_acc', 0.972729), ('SE', 0.756409), ('SP', 0.99514)])
+Best performance at Epoch: 32 | AUC_roc: 0.984089
+
+EPOCH: 34/50 --(learn_rate:0.000432) | Time: Fri Sep 10 18:11:29 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 34), ('train_loss', 0.122754), ('val_auc_roc', 0.985429), ('val_f1', 0.853932), ('val_acc', 0.974867), ('SE', 0.782608), ('SP', 0.994785)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 34 | AUC_roc: 0.985429
+
+EPOCH: 35/50 --(learn_rate:0.000421) | Time: Fri Sep 10 18:34:27 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 35), ('train_loss', 0.121488), ('val_auc_roc', 0.985984), ('val_f1', 0.848847), ('val_acc', 0.974262), ('SE', 0.769869), ('SP', 0.995437)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 35 | AUC_roc: 0.985984
+
+EPOCH: 36/50 --(learn_rate:0.000409) | Time: Fri Sep 10 19:06:30 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 36), ('train_loss', 0.120234), ('val_auc_roc', 0.984724), ('val_f1', 0.765827), ('val_acc', 0.963413), ('SE', 0.63732), ('SP', 0.997195)])
+Best performance at Epoch: 35 | AUC_roc: 0.985984
+
+EPOCH: 37/50 --(learn_rate:0.000397) | Time: Fri Sep 10 19:28:39 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 37), ('train_loss', 0.118598), ('val_auc_roc', 0.986347), ('val_f1', 0.868743), ('val_acc', 0.976254), ('SE', 0.837112), ('SP', 0.990669)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 37 | AUC_roc: 0.986347
+
+EPOCH: 38/50 --(learn_rate:0.000384) | Time: Fri Sep 10 19:54:18 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 38), ('train_loss', 0.116816), ('val_auc_roc', 0.98746), ('val_f1', 0.866244), ('val_acc', 0.976488), ('SE', 0.811057), ('SP', 0.993626)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 38 | AUC_roc: 0.98746
+
+EPOCH: 39/50 --(learn_rate:0.000370) | Time: Fri Sep 10 20:17:11 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 39), ('train_loss', 0.115693), ('val_auc_roc', 0.985444), ('val_f1', 0.845452), ('val_acc', 0.973832), ('SE', 0.762471), ('SP', 0.995729)])
+Best performance at Epoch: 38 | AUC_roc: 0.98746
+
+EPOCH: 40/50 --(learn_rate:0.000356) | Time: Fri Sep 10 20:40:21 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 40), ('train_loss', 0.115263), ('val_auc_roc', 0.986978), ('val_f1', 0.851027), ('val_acc', 0.974548), ('SE', 0.774452), ('SP', 0.995277)])
+Best performance at Epoch: 38 | AUC_roc: 0.98746
+
+EPOCH: 41/50 --(learn_rate:0.000342) | Time: Fri Sep 10 21:02:56 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 41), ('train_loss', 0.113161), ('val_auc_roc', 0.9887), ('val_f1', 0.853854), ('val_acc', 0.975159), ('SE', 0.77303), ('SP', 0.996099)])
+[0;33mSaving best model![0m
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+
+EPOCH: 42/50 --(learn_rate:0.000327) | Time: Fri Sep 10 21:25:20 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 42), ('train_loss', 0.112197), ('val_auc_roc', 0.987113), ('val_f1', 0.85344), ('val_acc', 0.974777), ('SE', 0.782329), ('SP', 0.994714)])
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+
+EPOCH: 43/50 --(learn_rate:0.000312) | Time: Fri Sep 10 21:48:03 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 43), ('train_loss', 0.111527), ('val_auc_roc', 0.987101), ('val_f1', 0.828455), ('val_acc', 0.971409), ('SE', 0.735443), ('SP', 0.995855)])
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+
+EPOCH: 44/50 --(learn_rate:0.000297) | Time: Fri Sep 10 22:10:03 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 44), ('train_loss', 0.109883), ('val_auc_roc', 0.987914), ('val_f1', 0.835785), ('val_acc', 0.972573), ('SE', 0.743505), ('SP', 0.996304)])
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+
+EPOCH: 45/50 --(learn_rate:0.000281) | Time: Fri Sep 10 22:39:01 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 45), ('train_loss', 0.108864), ('val_auc_roc', 0.986648), ('val_f1', 0.799399), ('val_acc', 0.96762), ('SE', 0.687287), ('SP', 0.996662)])
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+
+EPOCH: 46/50 --(learn_rate:0.000266) | Time: Sat Sep 11 00:07:18 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 46), ('train_loss', 0.108219), ('val_auc_roc', 0.988412), ('val_f1', 0.877335), ('val_acc', 0.978117), ('SE', 0.833645), ('SP', 0.993084)])
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+
+EPOCH: 47/50 --(learn_rate:0.000250) | Time: Sat Sep 11 00:29:46 2021
+There are 336 images in Testset
+[False  True]
+[0. 1.]
+OrderedDict([('epoch', 47), ('train_loss', 0.106803), ('val_auc_roc', 0.988366), ('val_f1', 0.858135), ('val_acc', 0.975626), ('SE', 0.785321), ('SP', 0.995341)])
+Best performance at Epoch: 41 | AUC_roc: 0.9887
+=> early stopping

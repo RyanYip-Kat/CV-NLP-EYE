@@ -1,0 +1,70 @@
+10/09/2021 02:19:31 [main.py 12] main - INFO: TASK ID 3dc21371
+10/09/2021 02:19:32 [main.py 52] main - INFO: PARAMETER PARSING
+10/09/2021 02:19:32 [main.py 56] main - INFO: 
+======= VRBotOption START =======
+state_num : 10
+action_num : 3
+triple_num_per_graph : 10
+know_vocab_size : None
+vocab_size : None
+response_max_len : 100
+embed_dim : 300
+hidden_units : 512
+hidden_dim : 512
+num_layers : 1
+bidirectional : True
+rnn_hidden_size : 256
+dropout : 0.2
+attention_type : mlp
+train_stage : natural
+ppn_dq : False
+max_context_turn : 10
+max_sentence_word : 100
+max_target_word : 100
+s_copy_lambda : 1.0
+a_copy_lambda : 1.0
+copy_lambda_decay_interval : 10000
+copy_lambda_decay_value : 1.0
+state_action_copy_lambda_mini : 1.0
+init_tau : 1.0
+tau_mini : 0.1
+tau_decay_interval : 5000
+tau_decay_rate : 0.5
+mask_state_prob : False
+node_embed_dim : 128
+with_weak_action : False
+training_sampling_times : 5
+attn_history_sentence : True
+with_state_know : True
+with_action_know : True
+with_copy : True
+GATConfig : <class 'resource.option.vrbot_option.VRBotOption.GATConfig'>
+max_node_num1 : 100
+max_node_num2 : 50
+single_node_max_triple1 : 10
+single_node_max_triple2 : 5
+======= VRBotOption END =======
+
+10/09/2021 02:19:32 [main.py 58] main - INFO: PREPARE DATA
+10/09/2021 02:19:32 [main.py 26] main - INFO: preparing sessions
+10/09/2021 02:19:32 [load_data.py 16] main - INFO: 
+read session from data/eyeai_train.zip
+10/09/2021 02:19:32 [load_data.py 16] main - INFO: 
+read session from data/eyeai_test.zip
+10/09/2021 02:19:33 [load_data.py 16] main - INFO: 
+read session from data/eyeai_valid.zip
+10/09/2021 02:19:33 [main.py 30] main - INFO: preparing vocab
+10/09/2021 02:19:33 [vocab.py 22] main.vocab - INFO: Vocab, size=45629, <sos>,<eos>,<pad> ... 抗宫炎片,头孢米诺,老年病,头孢氨苄片,舒肝解郁
+10/09/2021 02:19:33 [vocab.py 22] main.vocab - INFO: Vocab, size=5241, <sos>,<eos>,<pad> ... 抗宫炎片,头孢米诺,老年病,头孢氨苄片,舒肝解郁
+10/09/2021 02:19:38 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 01] START - INFERENCE TRAINING
+10/09/2021 02:20:13 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 01] FINISHED - INFERENCE TRAINING
+10/09/2021 02:20:13 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 02] START - INFERENCE TRAINING
+10/09/2021 02:20:45 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 02] FINISHED - INFERENCE TRAINING
+10/09/2021 02:20:45 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 03] START - INFERENCE TRAINING
+10/09/2021 02:21:19 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 03] FINISHED - INFERENCE TRAINING
+10/09/2021 02:21:19 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 04] START - INFERENCE TRAINING
+10/09/2021 02:21:52 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 04] FINISHED - INFERENCE TRAINING
+10/09/2021 02:21:52 [vrbot_engine.py 73] main.engine - INFO: [EPOCH 05] START - INFERENCE TRAINING
+10/09/2021 02:22:24 [vrbot_engine.py 75] main.engine - INFO: [EPOCH 05] FINISHED - INFERENCE TRAINING
+10/09/2021 02:22:24 [vrbot_engine.py 32] main.engine - INFO: DUMPING CKPT TO FILE data/ckpt/vrbot/3dc21371/5-83-train.model.ckpt
+10/09/2021 02:22:25 [vrbot_engine.py 34] main.engine - INFO: DUMPING CKPT DONE

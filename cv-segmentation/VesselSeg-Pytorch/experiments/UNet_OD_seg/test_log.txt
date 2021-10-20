@@ -1,0 +1,44 @@
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/DRIVE/test.txt [0m
+ori data shape < ori_imgs:(20, 3, 584, 565) GTs:(20, 1, 584, 565) FOVs:(20, 1, 584, 565)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+
+the side H is not compatible with the selected stride of 16
+(img_h - patch_h) MOD stride_h: 8
+So the H dim will be padded with additional 8 pixels
+the side W is not compatible with the selected stride of 16
+(img_w - patch_w) MOD stride_w: 5
+So the W dim will be padded with additional 11 pixels
+new padded images shape: (20, 1, 592, 576)
+
+Test images shape: (20, 1, 592, 576), vaule range (0.0 - 1.0):
+Number of patches on h : 32
+Number of patches on w : 31
+number of patches per image: 992, totally for testset: 19840
+test patches shape: (19840, 1, 96, 96), value range (0.0 - 1.0)
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 2848, 4288) GTs:(27, 1, 2848, 4288) FOVs:(27, 1, 2848, 4288)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+==> Loading checkpoint...
+[0;33mload data from ./prepare_dataset/data_path_list/IDRID_OD/val.txt [0m
+ori data shape < ori_imgs:(27, 3, 512, 512) GTs:(27, 1, 512, 512) FOVs:(27, 1, 512, 512)
+imgs pixel range 0-255: 
+GTs pixel range 0-255: 
+FOVs pixel range 0-255: 
+==================data have loaded======================
+new padded images shape: (27, 1, 512, 512)
+
+Test images shape: (27, 1, 512, 512), vaule range (0.00784313725490196 - 1.0):
+Number of patches on h : 27
+Number of patches on w : 27
+number of patches per image: 729, totally for testset: 19683
+test patches shape: (19683, 1, 96, 96), value range (0.00784313725490196 - 1.0)
+There are 27 images in Testset
+OrderedDict([('AUC_ROC', 0.99989), ('AUC_PR', 0.995835), ('f1-score', 0.962895), ('Acc', 0.998155), ('SE', 0.965968), ('SP', 0.998973), ('precision', 0.959842)])
